@@ -27,7 +27,7 @@ Add JFrog Xray integration to an existing PagerDuty service or create a new serv
    * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Xray + PagerDuty Notifications*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Xray Setup***  section (below) once you have finished these steps.
 3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Xray + PagerDuty Notifications***  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
-5. An **Integration Key** will be generated on this screen. Keep this key saved in a safe place, as it will be used when you configure the integration with  ***JFrog Xray + PagerDuty Notifications***  in the next section.
+5. An **Integration Key** will be generated on this screen. Click on the integration name next to the integration key and copy the **integration URL** in a safe place as it will be used when you configure the integration with  ***JFrog Xray + PagerDuty Notifications***  in the next section.
 ![integrations](images/integration.png)
 
 ## In JFrog Xray
@@ -35,7 +35,7 @@ Add JFrog Xray integration to an existing PagerDuty service or create a new serv
 ![step1](images/step1.png)
 2. Click on **Webhooks** in the **General** tile
 3. Create a **new webhook** for pagerduty
-![new webhook](images/new webhook.png)
+![new webhook](images/new_webhook.png)
 4. Enter **Webhook Name**
 5. Enter **URL** (URL is the Events API endpoint from pagerduty) _ex: https://events.pagerduty.com/integration/<integration_id>/enqueue_
 6. Click **Save**
@@ -44,7 +44,7 @@ Add JFrog Xray integration to an existing PagerDuty service or create a new serv
 8. Next, specify the **policy name** and select **security** from the dropdown list below policy name
 ![step8](images/step8.png)
 9. Next, create a **new rule** for the policy by clicking on the **New Rule** to the right
-![new rule](images/new rule.png)
+![new rule](images/new_rule.png)
 10. Enter a **rule name**
 11. In the **criteria** section, select the **minimal severity** or the **cvss score**. Violations in Xray are filtered based on this criteria and sent to pagerduty
 12. In the **Automatic Actions** section, select **Trigger Webhook** checkbox and select the webhook that you created above for pagerduty
