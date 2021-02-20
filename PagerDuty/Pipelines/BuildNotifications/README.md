@@ -75,10 +75,10 @@ Commit the pipeline yaml to your SCM provider and then [follow the official step
 ### Running a Pipelines Build
 1. Click on the JFrog Pipeline tab `My Pipelines`
 2. Select the Pipeline you have synced 
-3. Click on the Pipeline tile and click the `Run` button
+3. Click on the Pipeline tile and click the `Trigger this step` button
 ![PipelinesTrigger](images/PipelineTrigger.png)
 
-Or follow the official steps on all the way of how to [trigger a JFrog pipelines.](https://www.jfrog.com/confluence/display/JFROG/Triggering+Pipelines+and+Steps)
+Or follow the official steps on all the ways of how to [trigger a JFrog pipelines.](https://www.jfrog.com/confluence/display/JFROG/Triggering+Pipelines+and+Steps)
 
 # How to Uninstall
 1. Find the integration to delete by navigating to **Services** and selecting **Service Directory**
