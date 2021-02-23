@@ -5,7 +5,8 @@ Documentation and/or links to JFrog Partner integrations can be found this in re
 
 ## Table of Contents
    * Partner Integrations
-     * [PagerDuty](PagerDuty/Xray/SecurityIncidents/README.md)
+     * [PagerDuty Xray](PagerDuty/Xray/SecurityIncidents/README.md)
+     * [PagerDuty Pipelines](PagerDuty/Pipelines/BuildNotifications/README.md)
    * [Contributing](#contributing)
    * [Versioning](#versioning)
    * [Contact](#contact)
