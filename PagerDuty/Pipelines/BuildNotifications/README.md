@@ -1,8 +1,10 @@
 # PagerDuty + JFrog Pipelines Integration Benefits
-* Work with Product
+* Monitor your software release pipeline in real-time.  Receive up-to-date notifications within PagerDuty about the progress of your builds throughout the various stages in your continuous integration and continuous deployment pipeline.   
+* Respond quickly to build failures.  Receive actionable, granular information about a particular pipeline step, including its status, name, type, and other details to respond quickly to builds that are failing or taking too long to complete
 
 # How it Works
-* Work with Product 
+* JFrog Pipeline will send notifications by calling PagerDuty’s Events API.
+* PagerDuty users will be able to register the JFrog Pipeline integration application within their developer platform and set up the event integration.  Once the setup is complete, JFrog Pipelines will use the Events API to push notifications containing build status information.
 
 # Requirements
 * PagerDuty integration requires an admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
