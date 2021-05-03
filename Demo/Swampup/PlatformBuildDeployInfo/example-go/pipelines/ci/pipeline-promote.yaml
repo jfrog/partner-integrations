@@ -10,11 +10,10 @@ resources:
     type: BuildInfo
     configuration:
       sourceArtifactory: SwampupArtifactory
-      buildName: go-example-build-info-prod
 pipelines:
-  - name: go-example-build-info-prod
+  - name: go_example_build_info_prod
     steps:
-      - name: go-example-build-info-prod-build
+      - name: go_example_build_info_prod_build
         type: DockerBuild
         configuration:
           affinityGroup: dockerGroup
@@ -26,7 +25,7 @@ pipelines:
             - name: partnerGithubRepo
           integrations:
             - name: SwampupArtifactory
-      - name: go-example-build-info-prod-push
+      - name: go_example_build_info_prod_push
         type: DockerPush
         configuration:
           affinityGroup: dockerGroup
@@ -34,13 +33,13 @@ pipelines:
           integrations:
             - name: SwampupArtifactory
           inputSteps:
-            - name: go-example-build-info-prod-build
-      - name: go-example-publish-build-info
+            - name: go_example_build_info_prod_build
+      - name: go_example_publish_build_info
         type: PublishBuildInfo
         configuration:
           environmentVariables:
-            buildStepName: go-example-build-info-prod-build
+            buildStepName: go_example_build_info_prod_build
           inputSteps:
-            - name: go-example-build-info-prod-push
+            - name: go_example_build_info_prod_push
           outputResources:
             - name: swampupArtifactory
