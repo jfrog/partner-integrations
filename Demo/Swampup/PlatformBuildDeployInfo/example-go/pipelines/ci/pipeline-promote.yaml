@@ -22,7 +22,7 @@ pipelines:
           dockerImageName: 'swampup.jfrog.tech/docker-prod-virtual/example-go'
           dockerImageTag: 1.0.0
           inputResources:
-            - name: partnerGithubRepo
+            - name: swampupGithubRepo
           integrations:
             - name: SwampupArtifactory
       - name: go_example_build_info_prod_push
