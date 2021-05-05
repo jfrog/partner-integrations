@@ -40,7 +40,7 @@ An API token is also required for the JFrog Pipelines + Pagerduty Notifications 
 ## In JFrog Pipelines
 
 ### Creating a Pipelines Integration for PagerDuty
-1. Open your JFrog Platform with Pipelines and click on the `Adminstration wheel` in the left menu. Click on the `Pipelines` menu item and then click on the sub-tab `Integrations`.
+1. Open your JFrog Platform with Pipelines and click on the `Adminstration gears` in the left menu. Click on the `Pipelines` menu item and then click on the sub-tab `Integrations`.
 2. Click the `+ Add an Integration` link on the top right.
 3. Select `PagerDuty Events` for the integration type
 ![AddNewIntegration](images/AddNewIntegration.png)
@@ -67,11 +67,13 @@ pipelines:
       - name: pagerduty_example_step
         type: Bash
         configuration:
+         integrations:
+           - name: <MyPagerDutyIntegration>
           inputResources:
             - name: pagerDutyGitRepo
         execution:
           onExecute:
-            - send_notification "<MyPagerDutyIntegration>" --routingkey "<PagerDutyIntegrationKey>"
+            - send_notification <MyPagerDutyIntegration> --routingkey "<PagerDutyIntegrationKey>" --text "<Your message>"
 ````
 Commit the pipeline yaml to your SCM provider and then [follow the official steps on adding a pipeline](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipeline+Sources#ManagingPipelineSources-AddingaPipelineSource). 
 ### Running a Pipelines Build
