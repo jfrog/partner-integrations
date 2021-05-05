@@ -50,7 +50,7 @@ An API token is also required for the JFrog Pipelines + Pagerduty Notifications 
 
 ### Creating a Pipelines Build YAML
 1. Create a new git repository or use an existing repository to save a new file `pipeline.yaml`
-2. Create a new Pipelines integration for your SCM provider. [Visit the official documentation.](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipeline+Sources)
+2. Create a new Pipelines integration for your SCM provider. [Visit the official documentation.](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipelines+Integrations)
 3. Create a new pipeline YAML definition that uses the new PagerDuty Events integration above to send build notifications to PagerDuty.
 4. Replace `<MyPagerDutyIntegration>` with the name of the Pipelines integration for Pagerduty
 5. Replace `<PagerDutyIntegrationKey>` with the integration key obtained from PagerDuty service UI.
