@@ -27,7 +27,7 @@ Before we build `example-go` we need to ensure we have a `git commit` with our i
 
 Example git commit:
 
-`git commit -m 'JFROG-1 - Commit with issue tracker id`
+`git commit -m 'JFROG-1 - Commit with issue tracker id'`
 
 Once we have a `git commit` with our issue tracker id this information will be available in the Artifactory build info json.
 
