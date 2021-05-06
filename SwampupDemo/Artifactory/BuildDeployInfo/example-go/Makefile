@@ -5,13 +5,13 @@ usage:
 .PHONY: image
 image:
 	@echo "++ Building docker image..."
-	docker build -t swampup.jfrog.tech/docker-example-virtual/example-go:$(VERSION) . -f Dockerfile
+	docker build -t ${ARTIFACTORY_URL}/${ARTIFACTORY_DOCKER_REPO}/example-go:$(VERSION) . -f Dockerfile
 
-.PHONY: deploy
+.PHONY: push
 deploy:
 	@echo "++ Pushing docker image..."
-	docker login swampup.jfrog.tech
-	docker push swampup.jfrog.tech/docker-example-virtual/example-go:$(VERSION)
+	docker login ${ARTIFACTORY_URL}
+	docker push ${ARTIFACTORY_URL}/${ARTIFACTORY_DOCKER_REPO}/example-go:$(VERSION)
 
 .PHONY: build
 build: export GOARCH=amd64
@@ -28,8 +28,10 @@ publish: export CGO_ENABLED=0
 publish: export GO111MODULE=on
 publish: export GONOSUMDB="jfrog.com/*"
 publish:
-	@echo "++ Building go binary..."
-	jfrog rt go-publish $(GO_VIRTUAL_REPO) v$(VERSION) --build-name=$(BUILD_NAME) --build-number=$(BUILD_NUMBER)
+	@echo "++ Publishing..."
+	jfrog rt bag ${BUILD_NAME} ${BUILD_NUMBER} --config=${HOME}/.jfrog/jira-cli.conf
+	jfrog rt bce ${BUILD_NAME} ${BUILD_NUMBER}
+	jfrog rt bp ${BUILD_NAME} ${BUILD_NUMBER}
 
 .PHONY: tag
 tag:
