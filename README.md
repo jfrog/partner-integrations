@@ -5,8 +5,10 @@ Documentation and/or links to JFrog Partner integrations can be found this in re
 
 ## Table of Contents
    * Partner Integrations
-     * [PagerDuty Xray](PagerDuty/Xray/SecurityIncidents/README.md)
-     * [PagerDuty Pipelines](PagerDuty/Pipelines/BuildNotifications/README.md)
+     * [MSTeams Platform App](MSTeams/Platform/App/README.md)
+     * [PagerDuty Xray Security Incidents](PagerDuty/Xray/SecurityIncidents/README.md)
+     * [PagerDuty Pipelines Build Notifications](PagerDuty/Pipelines/BuildNotifications/README.md)
+     * [Slack Platform App](Slack/Platform/App/README.md)
    * [Contributing](#contributing)
    * [Versioning](#versioning)
    * [Contact](#contact)

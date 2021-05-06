@@ -1,0 +1,12 @@
+tmp
+.git
+.idea
+README.md
+old
+build.sh
+.pipeline
+pipelines
+bin
+tmp
+plugin/*.jar
+docker-compose.yml

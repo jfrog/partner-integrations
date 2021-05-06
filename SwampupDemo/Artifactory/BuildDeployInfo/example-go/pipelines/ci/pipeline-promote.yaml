@@ -1,0 +1,45 @@
+resources:
+  - name: swampupGithubRepo
+    type: GitRepo
+    configuration:
+      gitProvider: JohnpGithub
+      path: jfrog/partner-integrations
+      branches:
+        include: SwampupDemo
+  - name: swampupArtifactory
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: SwampupArtifactory
+pipelines:
+  - name: go_example_build_info_prod
+    steps:
+      - name: go_example_build_info_prod_build
+        type: DockerBuild
+        configuration:
+          affinityGroup: dockerGroup
+          dockerFileLocation: Demo/Swampup/PlatformBuildDeployInfo/example-go
+          dockerFileName: Dockerfile
+          dockerImageName: 'swampup.jfrog.tech/docker-prod-virtual/example-go'
+          dockerImageTag: 1.0.0
+          inputResources:
+            - name: swampupGithubRepo
+          integrations:
+            - name: SwampupArtifactory
+      - name: go_example_build_info_prod_push
+        type: DockerPush
+        configuration:
+          affinityGroup: dockerGroup
+          targetRepository: docker-prod-virtual
+          integrations:
+            - name: SwampupArtifactory
+          inputSteps:
+            - name: go_example_build_info_prod_build
+      - name: go_example_publish_build_info
+        type: PublishBuildInfo
+        configuration:
+          environmentVariables:
+            buildStepName: go_example_build_info_prod_build
+          inputSteps:
+            - name: go_example_build_info_prod_push
+          outputResources:
+            - name: swampupArtifactory

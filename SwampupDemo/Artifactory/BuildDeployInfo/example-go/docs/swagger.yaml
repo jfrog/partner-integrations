@@ -1,0 +1,85 @@
+definitions:
+  server.Bad:
+    properties:
+      failureId:
+        type: string
+      reason:
+        type: string
+      status:
+        type: string
+    type: object
+  server.Error:
+    properties:
+      error:
+        type: string
+    type: object
+  server.Good:
+    properties:
+      id:
+        type: string
+      status:
+        type: string
+    type: object
+info:
+  contact:
+    email: partner-support@jfrog.com
+    name: JFrog Support
+    url: https://jfrog.com/support/
+  description: Example Go API to demo JFrog Partner Integrations
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://jfrog.com/eula/
+  title: Example Go API
+  version: 1.0.0
+paths:
+  /bad:
+    get:
+      description: Example failure endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/server.Bad'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/server.Error'
+      security:
+      - ApiKeyAuth: []
+      - OAuth2Application:
+        - write
+        - admin
+      summary: Example failure endpoint
+  /good:
+    get:
+      description: Example successful endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/server.Good'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/server.Error'
+      security:
+      - ApiKeyAuth: []
+      - OAuth2Application:
+        - write
+        - admin
+      summary: Example successful endpoint
+securityDefinitions:
+  OAuth2Application:
+    authorizationUrl: ""
+    flow: application
+    scopes:
+      admin: ' Grants read and write access to administrative information'
+      write: ' Grants write access'
+    tokenUrl: /token
+    type: oauth2
+swagger: "2.0"

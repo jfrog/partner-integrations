@@ -1,0 +1,12 @@
+atlassian-connector
+bin/
+files/
+tmp/
+credentials/
+override-values.yaml
+.idea
+.vscode
+plugin/*.jar
+config/secret
+build/local/.conf
+.jfrog/*
