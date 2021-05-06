@@ -17,7 +17,7 @@ pipelines:
         type: DockerBuild
         configuration:
           affinityGroup: dockerGroup
-          dockerFileLocation: Demo/Swampup/PlatformBuildDeployInfo/example-go
+          dockerFileLocation: SwampupDemo/Artifactory/BuildDeployInfo/example-go
           dockerFileName: Dockerfile
           dockerImageName: 'swampup.jfrog.tech/docker-prod-virtual/example-go'
           dockerImageTag: 1.0.0
