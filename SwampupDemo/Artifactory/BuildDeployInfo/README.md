@@ -2,7 +2,7 @@
 # JFrog Platform Build Deploy Info Demo
 
 ## Purpose
-Utilize JFrog Artifactory and Partner integrations (Slack, Pagerduty, Datadog, Jiracloud) to create a robust end to end Security information event management build pipeline to enrich your Jira ticket with build and deployment information from Artifactory.
+Utilize JFrog Artifactory and Partner integrations (Slack, Pagerduty, Datadog, Jira Cloud) to create a robust end to end Security information event management build pipeline to enrich your Jira ticket with build and deployment information from Artifactory.
 
 ## Artifactory Setup
 Artifactory is required and we recommend following the below best practices highlighted in this demo:
