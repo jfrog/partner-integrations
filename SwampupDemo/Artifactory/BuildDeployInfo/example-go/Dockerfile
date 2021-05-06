@@ -1,6 +1,6 @@
 FROM golang:1.16-alpine AS builder
 
-ARG srcpath="/build/jiracloud-connector"
+ARG srcpath="/build/example-go"
 
 RUN apk --no-cache add git && \
     mkdir -p "$srcpath"
