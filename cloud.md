@@ -42,8 +42,17 @@ Assuming you are an Admin, click on the top right where your name is, and then *
 
 At this point, copy the **API Key** into the JIRA Initilization screen and click the **Submit** button. Once you get the notification that the initializiation was successful, you can go back into your JIRA Cloud instance.
 
-# Integration Walkthrough
+# Uploading a Build to Artifactory
 
+One way to add build information to Artifactory is manually uploading a **buildinfo.json** to your Artiactory Cloud instance. 
+
+In this example, the important thing to note is the  **issues** and then **affectedIssues** keys in your json file. This is how this information will be associated to your issue in JIRA.
+
+Next, upload the **buildinfo.json** to Artifactory and inside your JFrog Platform instance, you can navigate to **Builds** and you should see the build information you just uploaded. 
+
+Now, navigate to the **Issues** tab and you will see a direct link to your **JIRA Cloud issue**. 
+
+You'll now notice that issue has been updated.
 
 # How to Uninstall
 --
