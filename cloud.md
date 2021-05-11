@@ -28,6 +28,21 @@ First, visit the [Atlassian Marketplace](https://marketplace.atlassian.com/searc
 
 You should see the **JFrog Platform: Artifactory App for Jira**. Click on the icon and on the top-right, hit the **Get it now** button.
 
+This will install the JFrog app into your JIRA instance. Once installed, a pop-up should appear on the top-right of your screen. Click on **Get started**.
+
+You should see a screen asking for your **Artifactory Cloud URL** and **API Key**. 
+
+At this point, you'll need to make sure you are logged into your Artifactory cloud instance.
+
+Copy the first part of the URL for your Artifactory cloud instance and paste it into the JIRA Initilization screen for **Artifactory Cloud URL**.
+
+Next, to find the API Key, you'll need to have Admin permissions.
+
+Assuming you are an Admin, click on the top right where your name is, and then **edit profile**, and there will be an API Key section. You may need to generate a new API Key if you have never generated one. 
+
+At this point, copy the **API Key** into the JIRA Initilization screen and click the **Submit** button. Once you get the notification that the initializiation was successful, you can go back into your JIRA Cloud instance.
+
+
 
 
 
