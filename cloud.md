@@ -22,6 +22,8 @@ If you need help with this integration, please contact `partner_support@jfrog.co
 
 # How to connect your Artifactory cloud instance to JIRA Cloud
 
+You can [watch the video](https://drive.google.com/file/d/1l_oBI5m66uPvv2woZtAZpS2l9CRhLXAQ/view) or **follow the steps below**:
+
 First, visit the [Atlassian Marketplace](https://marketplace.atlassian.com/search?query=JFrog) and search for **JFrog**.
 
 ![Atlassian Marketplace Search](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
