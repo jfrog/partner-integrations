@@ -42,9 +42,7 @@ Assuming you are an Admin, click on the top right where your name is, and then *
 
 At this point, copy the **API Key** into the JIRA Initilization screen and click the **Submit** button. Once you get the notification that the initializiation was successful, you can go back into your JIRA Cloud instance.
 
-
-
-
+# Integration Walkthrough
 
 
 # How to Uninstall
