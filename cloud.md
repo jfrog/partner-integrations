@@ -1,6 +1,6 @@
 # JIRA Cloud + JFrog Artifactory Integration
 
-* This integration creates an automated connection that delivers your JFrog Artifactory repository buildinfo directly to JIRA. JFrog Artifactory supports build integrations whether you are running builds on one of the common CI servers in use today, on cloud-based CI servers, or standalone without a CI server.
+* This integration creates an automated connection that delivers your JFrog Artifactory repository build information directly to your JIRA issues. JFrog Artifactory supports build integrations whether you are running builds on one of the common CI servers in use today, on cloud-based CI servers, or standalone without a CI server.
 
 * Integration of Artifactory into your build ecosystem provides important information that supports fully reproducible builds through visibility of artifacts deployed, dependencies and information on the build environment. 
 
@@ -20,7 +20,15 @@
 # Support
 If you need help with this integration, please contact `partner_support@jfrog.com`
 
-# Integration Walkthrough
+# How to connect your Artifactory cloud instance to JIRA Cloud
+
+First, visit the [Atlassian Marketplace](https://marketplace.atlassian.com/search?query=JFrog) and search for **JFrog**.
+
+![Atlassian Marketplace Search](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
+
+You should see the **JFrog Platform: Artifactory App for Jira**. Click on the icon and on the top-right, hit the **Get it now** button.
+
+
 
 
 
