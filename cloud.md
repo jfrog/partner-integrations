@@ -15,7 +15,8 @@
 * All of this together provides critical traceability of an artifact to the build that generated that artifact, and the information needed to reproduce that build.
 
 # Requirements
---
+
+* You must be a user with Admin permissions to generate an API Key
 
 # Support
 If you need help with this integration, please contact `partner_support@jfrog.com`
