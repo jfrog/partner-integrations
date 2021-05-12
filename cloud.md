@@ -60,7 +60,7 @@ You'll now notice that issue has been updated.
 
 To uninstall, use the **Uninstall app** button in Manage apps in jira cloud:
 
-![Uninstall app](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
+![Uninstall app](https://github.com/Dattax/partner-integrations/blob/main/img/jira_image.png?raw=true)
 
 
 
