@@ -57,4 +57,10 @@ Now, navigate to the **Issues** tab and you will see a direct link to your **JIR
 You'll now notice that issue has been updated.
 
 # How to Uninstall
---
+
+To uninstall, use the **Uninstall app** button in Manage apps in jira cloud:
+
+![Uninstall app](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
+
+
+
