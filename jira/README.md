@@ -32,21 +32,33 @@ You can [watch the video](https://drive.google.com/file/d/1l_oBI5m66uPvv2woZtAZp
 
 2. You should see the **JFrog Platform: Artifactory App for Jira**. Click on the icon and on the top-right, hit the **Get it now** button.
 
-![Atlassian Marketplace Search](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
 
-This will install the JFrog app into your JIRA instance. Once installed, a pop-up should appear on the top-right of your screen. Click on **Get started**.
+3. This will install the JFrog app into your JIRA instance. Once installed, a pop-up should appear on the top-right of your screen. Click on **Get started**.
 
-You should see a screen asking for your **Artifactory Cloud URL** and **API Key**. 
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
 
-At this point, you'll need to make sure you are logged into your Artifactory cloud instance.
+4. You should see a screen asking for your **Artifactory Cloud URL** and **API Key**. 
 
-Copy the first part of the URL for your Artifactory cloud instance and paste it into the JIRA Initilization screen for **Artifactory Cloud URL**.
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
 
-Next, to find the API Key, you'll need to have Admin permissions.
+5. At this point, you'll need to make sure you are logged into your Artifactory cloud instance. Copy the first part of the URL for your Artifactory cloud instance and paste it into the JIRA Initilization screen for **Artifactory Cloud URL**.
 
-Assuming you are an Admin, click on the top right where your name is, and then **edit profile**, and there will be an API Key section. You may need to generate a new API Key if you have never generated one. 
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
 
-At this point, copy the **API Key** into the JIRA Initilization screen and click the **Submit** button. Once you get the notification that the initializiation was successful, you can go back into your JIRA Cloud instance.
+6. Next, to find the API Key, you'll need to have Admin permissions.
+
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
+
+7. As an admin, log into your Artifactory SaaS instance, click on gear icon near top left, open “Identity and Access”, click on “Access Tokens”. Click on “Generate Admin Token at top right”, click “Generate”.
+
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
+
+8. Now, copy the **API Key** into the JIRA Initilization screen and click the **Submit** button. 
+
+![Integration Screenshot](https://github.com/Dattax/partner-integrations/blob/main/jira/images/image.png?raw=true)
+
+Once you get the notification that the initializiation was successful, you can go back into your JIRA Cloud instance.
 
 # Uploading a Build to Artifactory
 
