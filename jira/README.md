@@ -17,6 +17,7 @@
 # Requirements
 
 * You must be a user with Admin permissions to generate an API Key
+* You should have a Jira Cloud instance. You can signup for a free instance at: https://www.atlassian.com/software/jira/pricing
 
 # Support
 If you need help with this integration, please contact `partner_support@jfrog.com`
@@ -25,11 +26,13 @@ If you need help with this integration, please contact `partner_support@jfrog.co
 
 You can [watch the video](https://drive.google.com/file/d/1l_oBI5m66uPvv2woZtAZpS2l9CRhLXAQ/view) or **follow the steps below**:
 
-First, visit the [Atlassian Marketplace](https://marketplace.atlassian.com/search?query=JFrog) and search for **JFrog**.
+1. First, visit the [Atlassian Marketplace](https://marketplace.atlassian.com/search?query=JFrog) and search for **JFrog**.
 
 ![Atlassian Marketplace Search](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
 
-You should see the **JFrog Platform: Artifactory App for Jira**. Click on the icon and on the top-right, hit the **Get it now** button.
+2. You should see the **JFrog Platform: Artifactory App for Jira**. Click on the icon and on the top-right, hit the **Get it now** button.
+
+![Atlassian Marketplace Search](https://github.com/Dattax/partner-integrations/blob/main/img/img1.png?raw=true)
 
 This will install the JFrog app into your JIRA instance. Once installed, a pop-up should appear on the top-right of your screen. Click on **Get started**.
 
