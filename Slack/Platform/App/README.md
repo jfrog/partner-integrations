@@ -21,6 +21,8 @@ If you need help with this integration, please contact `partner_support@jfrog.co
 
 The first thing to do is to download the Slack Application. 
 
+Next, install the JFrog app.
+
 Then, configure your JFrog instance.
 
 Next, login to your JFrog account. 
