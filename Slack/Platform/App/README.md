@@ -1,11 +1,6 @@
-# Slack
+# Welcome to the JFrog Slack App Documentation
 
 This integration is between JFrog Artifactory and Xray and Slack. We know that software development happens in a myriad of tools and collaboration environments. Today there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged in. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
-
-# How it Works
-
-* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, and Build events through notifications and actionable cards inside the Microsoft Teams browser. 
-* Additionally, you can get notification based on policies setup in JFrog Xray.
 
 # Requirements
 
@@ -13,21 +8,31 @@ This integration is between JFrog Artifactory and Xray and Slack. We know that s
 * You must have the ability to setup policies and watches prior to getting Xray notifications.
 * You should have a cloud instance of Artifactory. You can signup for a free cloud instance at: https://jfrog.com/start-free/
 
-# Support
+# How it Works
 
-If you need help with this integration, please contact `partner_support@jfrog.com`
+* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, and Build events through notifications and actionable cards inside the Microsoft Teams browser. 
+* Additionally, you can get notification based on policies setup in JFrog Xray.
+
+# Creating a New Notification
+--
+
+# Suspending Notifications
+--
+
+# Using Commands to Navigate the App
+--
 
 # Getting Started
 
-The first thing to do is to download the Slack Application. 
+First, make sure you have Slack. You can go to [https://slack.com/](https://slack.com/) to download the Slack Application.
 
-Next, install the JFrog app.
+Next, install the JFrog app from [https://jfrog.com/integration/slack/](https://jfrog.com/integration/slack/).
 
 Then, configure your JFrog instance.
 
 Next, login to your JFrog account. 
 
-Once logged in with admin privledges, you can start creating notifications. 
+Once logged in with admin privledges, you can start creating notifications and adding them to channels. 
 
 Hit **create notifications** to bring up the list of options. 
 
@@ -35,9 +40,25 @@ Select which type notification you would like to create from the drop-down menu.
 
 On the next screen, name the notification, select which events you would like to include in the notification, and which repos should be included. You can also setup include/exclude pattens and select a channel to send the notifications to.
 
-Once you have setup notifications, you should start seeing the notification cards in the channel within 20 minutes.
+Once you have setup notifications, you should start seeing the notification cards in the channel within 15 minutes.
 
-# List of Commands
+# Using JFrog Xray in Slack
+
+The Slack Application supports Xray License and Vulnerability notifications. For these notifications to work, you must first setup **Watches** and **Policies** inside the JFrog Platform (Xray). Once you have configured your Xray Policy, you can then come back to Slack and create notifications that respond to the policy. 
+
+To learn how to setup Watches and Policies, [see this video](https://www.youtube.com/watch?v=88hwwMJsS58)
+
+The JFrog Slack app allows you to view vulnerability notifications two ways:
+
+**One: by CVE**
+
+--
+
+**Two: by Component (Aggregate View)**
+
+--
+
+# Full List of Commands
 
 ## Artifactory
 
@@ -97,3 +118,8 @@ Provides a list of current watches (that user can has read access to) with a mic
 **/jfrog xr policy list <regex or wildcard>**
 Provides a list of current policies with a micro action to open JFrog Platform.
 
+# Support
+
+If you need help with this integration, please contact `partner_support@jfrog.com`
+
+  
