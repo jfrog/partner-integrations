@@ -9,6 +9,22 @@
 * Once the webhook is configured within JFrog Xray, an incident will be sent to the PagerDuty service whenever security or license violation occurs.
 * Xray performs a recheck of all watched resources and any found violations will send an event to a service in PagerDuty. Events from Xray will trigger a new incident on the corresponding PagerDuty service, or group as alerts into an existing incident.
 
+# Available Information in PagerDuty
+* Once you have setup using the walkthrough below, the following metadata will become available in PagerDuty:
+
+| CUSTOM DETAILS |  |
+| ------------- | ------------- |
+| created | 2019-11-21T04:47:09.837Z |
+| cve | CVE-2019-19126 |
+| description	|  On the x86-64 architecture, the GNU C Library (aka glibc) before 2.31 fails to ignore the LD_PREFER_MAP_32BIT_EXEC environment variable during program execution after a security transition, allowing local attackers to restrict the possible mapping addresses for loaded libraries and thus bypass ASLR for a setuid program. |
+| impacted_artifacts | [ { "depth": 0, "display_name": "connector:0.8.0", "infected_files": [ { "depth": 0, "display_name": "debian:buster:libc6:2.28-10", "name": "libc6:2.28-10", "parent_sha": "9411f38bb959244da6cb01b9baeb079f9e5193832ad5c7b4ad3aa45301f50e1c", "path": "", "pkg_type": "Debian", "sha256": "30fe03584a947466c61145df3cd7ea3c0503aa319b8bc913f373701fdff44e85" } ], "name": "manifest.json", "parent_sha": "6537920ab5240121a74713c46c3f5a3f0a13db43fe16684be6db91dd21706501", "path": "default/integrations/connector/0.8.0/", "pkg_type": "Docker", "sha1": "", "sha256": "6537920ab5240121a74713c46c3f5a3f0a13db43fe16684be6db91dd21706501" } ] |
+| provider | JFrog |
+| severity | Low | 
+| summary |  On the x86-64 architecture, the GNU C Library (aka glibc) before 2.31 fails to ignore the LD_PREFER_MAP_32BIT_EXEC environment variable during program execution after a security transition, allowing local attackers to restrict the possible mapping addresses for loaded libraries and thus bypass ASLR for a setuid program. | 
+| type | security | 
+| policy | PD_Test-2-policy | 
+| watch | PD_Test-2-Watch | 
+       
 # Requirements
 * PagerDuty integration requires an admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
 * JFrog Xray requires an Admin based role with administrative privileges to configure the integration.  If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
@@ -17,6 +33,8 @@
 If you need help with this integration, please contact `partner_support@jfrog.com`
 
 # Integration Walkthrough
+To add the integration, you must first have a PagerDuty account setup. Next, follow the instructions below or [watch the video](https://www.youtube.com/watch?v=WxUc8bcEh0U) to understand how to finish the integration.
+
 ## In PagerDuty
 Add JFrog Xray integration to an existing PagerDuty service or create a new service by following the steps below
 
