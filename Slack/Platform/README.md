@@ -12,7 +12,7 @@ We know that software development happens in a myriad of collaboration environme
 * You can  send these notifications to multiple channels.
 * Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. Here is an example of a security violation and adding an ignore rule to snooze the notification (happens in Slack and in the JFrog Platform):
 
-[IMAGE]
+![Image of Ignore Rules](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image4.png?raw=true)
 
 # Support
 
@@ -38,7 +38,7 @@ Next, go to the **Administration** section and then click on **Security**.
 
 Then click on **+ New Client Integration**. Provide it a name and then Generate your ID and Secret.
 
-[IMAGE]
+![Image of JPD](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true)
 
 When you have your **Integration ID and Secret**, copy and paste these items into the Slack modal window.
 
@@ -49,8 +49,6 @@ Hit Save and look for the success message! Great, you have now connected your or
 # Login
 
 Next, login to your JFrog account on the Slack app.
-
-[IMAGE]
 
 Once you see the confirmation message, you can create new notifications and add them to Slack channels.
 
@@ -65,7 +63,7 @@ Hit create notifications to bring up the list of options.
 
 Select which type notification you would like to create from the drop-down menu.
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="200" height="200">
 
 On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
 
