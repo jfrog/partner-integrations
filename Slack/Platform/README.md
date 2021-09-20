@@ -1,17 +1,18 @@
-# Slack
+# Welcome to the JFrog Slack App
 
-This integration is between JFrog Artifactory and Xray and Slack. We know that software development happens in a myriad of tools and collaboration environments. Today there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged in. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
+This integration is between JFrog Artifactory and Xray and Slack. 
+
+[IMAGE]
+
+We know that software development happens in a myriad of collaboration environments. Today, there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged into the platform. When it comes to people across the organization knowing what’s going on, this Slack integration provides users real-time information about Artifactory and Xray events. This will give each user situational awareness about occurrences in the JFrog Platform. Additionally, where appropriate - they will have links and action buttons to follow-up on the event.
 
 # How it Works
 
-* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, and Build events through notifications and actionable cards inside the Microsoft Teams browser. 
-* Additionally, you can get notification based on policies setup in JFrog Xray.
+* This integration allows you the ability to see Artifact, Artifact Properties, Docker Tag, and Build events through notifications and actionable UI cards inside Slack.
+* You can  send these notifications to multiple channels.
+* Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. Here is an example of a security violation and adding an ignore rule to snooze the notification (happens in Slack and in the JFrog Platform):
 
-# Requirements
-
-* You must be a user with Admin permissions to generate a JPD key.
-* You must have the ability to setup policies and watches prior to getting Xray notifications.
-* You should have a cloud instance of Artifactory. You can signup for a free cloud instance at: https://jfrog.com/start-free/
+[IMAGE]
 
 # Support
 
@@ -19,81 +20,171 @@ If you need help with this integration, please contact `partner_support@jfrog.co
 
 # Getting Started
 
-The first thing to do is to download the Slack Application. 
+If you do not already have Slack, download it now ([for Windows](https://slack.com/help/articles/209038037-Download-Slack-for-Windows) or [for Mac](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)).
 
-Next, install the JFrog app.
+Next, [Install the JFrog Slack Application using this link](https://slack-connector.jfrog.info/webhooks/slack/oauth/install-url).
 
-Then, configure your JFrog instance.
+Make sure your organization has the latest cloud instance of Artifactory. If not, please upgrade or you can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/).
 
-Next, login to your JFrog account. 
+You can scroll down to see the Requirements for using this integration.
 
-Once logged in with admin privledges, you can start creating notifications. 
+# Next: Connect Your JFrog Platform Deployment (JPD)
 
-Hit **create notifications** to bring up the list of options. 
+Once you’ve installed the JFrog Slack Application from the Slack Store, you must connect the application to your JFrog Platform Deployment (or JPD) instance.
 
-Select which type notification you would like to create from the drop-down menu. 
+First, login to the JFrog platform. You must be an admin to access your credentials.
 
-On the next screen, name the notification, select which events you would like to include in the notification, and which repos should be included. You can also setup include/exclude pattens and select a channel to send the notifications to.
+Next, go to the **Administration** section and then click on **Security**.
 
-Once you have setup notifications, you should start seeing the notification cards in the channel within 20 minutes.
+Then click on **+ New Client Integration**. Provide it a name and then Generate your ID and Secret.
+
+[IMAGE]
+
+When you have your **Integration ID and Secret**, copy and paste these items into the Slack modal window.
+
+Last, copy and paste your JFrog Platform URL (found at the top of your browser window) into the Slack modal window where it says **JFrog URL**.
+
+Hit Save and look for the success message! Great, you have now connected your organization’s JFrog account to the Slack app.
+
+# Login
+
+Next, login to your JFrog account on the Slack app.
+
+[IMAGE]
+
+Once you see the confirmation message, you can create new notifications and add them to Slack channels.
+
+We expect you to have Slack channels already setup - how you want to organize notifications to different Slack channels is up to your organization.
+
+
+# Creating Notifications
+
+Once logged in with Admin privileges, you can start creating notifications.
+
+Hit create notifications to bring up the list of options.
+
+Select which type notification you would like to create from the drop-down menu.
+
+[IMAGE]
+
+On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
+
+[IMAGE]
+
+You select a channel to send the notifications to. Hit **Next**.
+
+On the next screen, you may see options for your notification. For example, for build notifications, you can select any build or find an existing build (in your JFrog Platform Deployment) by name or pattern.
+
+[IMAGE]
+
+Once you hit **Next**, you should see a success message.
+
+Once you have setup notifications, you should start seeing the notification cards in the channel within about 20 minutes. If you do not see notifications working, first type **/jfrog rt list** to bring up the list of active notifications. 
+
+If you see nothing on the notification list, please try again or contact support.
+
+# Types of Supported Notifications
+
+All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
+
+### Artifactory
+
+Artifact
+
+Artifact Properties
+
+Docker Tags
+
+Builds
+
+Release Bundles (Enterprise+)
+
+Distribution (Enterprise+)
+
+### Xray
+
+Security Violations by CVE
+
+Security Violations by Component (Summary view)
+
+License Compliance
+
+# Xray Notifications
+
+JFrog Xray notifications are special in that only repositories that are being actively watched in Xray and have a policy setup will generate notification events. To learn more about how Xray policies and watch work, [click here](https://www.youtube.com/watch?v=88hwwMJsS58). 
+
+If you already have policies and watches setup in Xray, you can create notifications in the Slack app. 
+
+Hit Create Notification.
+
+Give the Notification a name, which policy it is coming from, which channel to send the notification to, and whether you would like the security violation to send you information by individual CVE or send a grouped notification by Component (Summary).
+
+[IMAGE]
+
+**Example - by CVE:**
+
+[IMAGE]
+
+**Example - by Component:**
+
+[IMAGE]
+
+## Additionally:
+
+All notifications can be paused, which removes them from being active in Slack channels, but not does not delete the underlying webhook so they can be added again.
+
+[IMAGE]
+
+The delete notification button deletes the entire notification from Slack as well as the underlying webhook in the JFrog Platform. 
+
+# List of Shortcuts
+
+**Create Notifications**
+
+**List XR Notifications**
+
+**List RT Notifications**
+
+**List Policies**
+
+**List Watches**
 
 # List of Commands
 
-## Artifactory
+Outside the UI elements, you can also interact with our application using commands in the Slack chat area. The commands we currently support are:
 
-**/jfrog login**
-Connects to your JFrog Instance and asks for JFrog Username and Password.
+### General
 
-**/jfrog rt notify list**
-Provides a list of current notifications subscribed to by the personal or channel
+/jfrog help - Show help content
 
-**/jfrog rt notify stop <#>**
-Ends subscription to the specified notification.  
+/jfrog configure - Connects to your JFrog Instance and asks for JFrog URL, Integration ID, and Integration secret
 
-**/jfrog rt notify artifact <reponame> <pattern>**
-Reponame should have any local, remote or virtual repository as an option. This should send notifications on the ‘artifact deployed’ event for the specified repository and path.  
+/jfrog logout - Log out from the JFrog Platform with this Slack app
 
-**/jfrog rt notify docker <reponame> <pattern>**
-This should send notifications on the ‘docker push’ and ‘docker promote’ events for the specified repository and path.
+### Artifactory
 
-**/jfrog rt notify <packagetype> <reponame> <package coordinate>**
-This should send notifications on the ‘artifact deployed’ event for the specified repository with a path calculated based on the package coordinate. 
+/jfrog rt notify list - Provides a list of current notifications subscribed to by the personal or channel
 
-**/jfrog rt notify build <buildname>**
-Active card should provide build name, number, build agent, build principal, timestamp, a link back, and promotion status, as well as triggering event (uploaded to, promoted to)
+/jfrog rt notify stop <notification name> - Pauses subscription to the specified notification
 
-**/jfrog rt artifact list <wildcard or regex>**
-Yields a list of artifacts matching the repo filter
+/jfrog rt notify resume <notification name> - Resumes subscription to the specified notification
 
-**/jfrog rt repo list <wildcard or regex>**
-Yields a list of all repos matching the filter
-  
-## Xray 
+### Xray
 
-**/jfrog xr notify list**
-Provides a list of current xray notifications subscribed to by the personal or channel bot context.
+/jfrog xr notify list - Provides a list of current xray notifications subscribed to by the personal or channel bot context
 
-**/jfrog xr ignore watch watch_name (date) <#>**
-This ignores the specific watch. 
-Users must specify length of time. 
+/jfrog xr watch list - Provides a list of current watches (that user can has read access to) with a micro action to subscribe the bot to the notification
 
-**/jfrog xr ignore artifact artifact_name (date) <#>**
-This ignores the specific watch. 
-Users must specify length of time. 
-Based on specific watch for any any component, any artifact.
+/jfrog xr policy list - Provides a list of current policies with a micro action to open JFrog Platform.
 
-**/jfrog xr ignore vuln vulnerability_id (date) <#>**
-Allows user to specify an ignore rule based on a specific vulnerability and specify the date it stops ignoring.
-Users must specify length of time. 
-Based on any watch, any component, any artifact.
+# Requirements 
 
-**/jfrog xr watch <watchname> **
-Directs a watch to a given channel. 
-Active card should provide a link back. 
+* Your organization has a cloud instance of Artifactory. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
 
-**/jfrog xr watch list <regex wildcard>**
-Provides a list of current watches (that user can has read access to) with a micro action to subscribe the bot to the notification.
+* You must be a user with Admin permissions to authenticate your organization’s Slack app with your JFrog Platform Deployment (JPD).
 
-**/jfrog xr policy list <regex or wildcard>**
-Provides a list of current policies with a micro action to open JFrog Platform.
+* You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. Once created, any team member can add existing notifications to new Slack channels.
 
+* Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
+
+You can also click here for a list of [FAQ's](#).
