@@ -10,7 +10,7 @@ We know that software development happens in a myriad of collaboration environme
 * You can  send these notifications to multiple channels.
 * Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. Here is an example of a security violation and adding an ignore rule to snooze the notification (happens in Slack and in the JFrog Platform):
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image4.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image4.png?raw=true" width="800">
 
 # Support
 
@@ -36,7 +36,7 @@ Next, go to the **Administration** section and then click on **Security**.
 
 Then click on **+ New Client Integration**. Provide it a name and then Generate your ID and Secret.
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true" width="600">
 
 When you have your **Integration ID and Secret**, copy and paste these items into the Slack modal window.
 
@@ -60,17 +60,17 @@ Hit create notifications to bring up the list of options.
 
 Select which type notification you would like to create from the drop-down menu.
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="600">
 
 On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image8.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image8.png?raw=true" width="600">
 
 You select a channel to send the notifications to. Hit **Next**.
 
 On the next screen, you may see options for your notification. For example, for build notifications, you can select any build or find an existing build (in your JFrog Platform Deployment) by name or pattern.
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image9.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image9.png?raw=true" width="600">
 
 Once you hit **Next**, you should see a success message.
 
@@ -114,21 +114,21 @@ Hit Create Notification.
 
 Give the Notification a name, which policy it is coming from, which channel to send the notification to, and whether you would like the security violation to send you information by individual CVE or send a grouped notification by Component (Summary).
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image6.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image6.png?raw=true" width="600">
 
 **Example - by CVE:**
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image1.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image1.png?raw=true" width="800">
 
 **Example - by Component:**
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image10.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image10.png?raw=true" width="800">
 
 ## Additionally:
 
 All notifications can be paused, which removes them from being active in Slack channels, but not does not delete the underlying webhook so they can be added again.
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image1.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image3.png?raw=true" width="600">
 
 The delete notification button deletes the entire notification from Slack as well as the underlying webhook in the JFrog Platform. 
 
