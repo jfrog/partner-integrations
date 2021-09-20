@@ -2,8 +2,6 @@
 
 This integration is between JFrog Artifactory and Xray and Slack. 
 
-[IMAGE]
-
 We know that software development happens in a myriad of collaboration environments. Today, there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged into the platform. When it comes to people across the organization knowing what’s going on, this Slack integration provides users real-time information about Artifactory and Xray events. This will give each user situational awareness about occurrences in the JFrog Platform. Additionally, where appropriate - they will have links and action buttons to follow-up on the event.
 
 # How it Works
@@ -12,7 +10,7 @@ We know that software development happens in a myriad of collaboration environme
 * You can  send these notifications to multiple channels.
 * Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. Here is an example of a security violation and adding an ignore rule to snooze the notification (happens in Slack and in the JFrog Platform):
 
-![Image of Ignore Rules](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image4.png?raw=true)
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image4.png?raw=true" width="800">
 
 # Support
 
@@ -38,7 +36,7 @@ Next, go to the **Administration** section and then click on **Security**.
 
 Then click on **+ New Client Integration**. Provide it a name and then Generate your ID and Secret.
 
-![Image of JPD](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true)
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true" width="600">
 
 When you have your **Integration ID and Secret**, copy and paste these items into the Slack modal window.
 
@@ -54,7 +52,6 @@ Once you see the confirmation message, you can create new notifications and add 
 
 We expect you to have Slack channels already setup - how you want to organize notifications to different Slack channels is up to your organization.
 
-
 # Creating Notifications
 
 Once logged in with Admin privileges, you can start creating notifications.
@@ -63,17 +60,17 @@ Hit create notifications to bring up the list of options.
 
 Select which type notification you would like to create from the drop-down menu.
 
-<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="200" height="200">
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="600">
 
 On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image8.png?raw=true" width="600">
 
 You select a channel to send the notifications to. Hit **Next**.
 
 On the next screen, you may see options for your notification. For example, for build notifications, you can select any build or find an existing build (in your JFrog Platform Deployment) by name or pattern.
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image9.png?raw=true" width="600">
 
 Once you hit **Next**, you should see a success message.
 
@@ -117,21 +114,21 @@ Hit Create Notification.
 
 Give the Notification a name, which policy it is coming from, which channel to send the notification to, and whether you would like the security violation to send you information by individual CVE or send a grouped notification by Component (Summary).
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image6.png?raw=true" width="600">
 
 **Example - by CVE:**
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image1.png?raw=true" width="800">
 
 **Example - by Component:**
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image10.png?raw=true" width="800">
 
 ## Additionally:
 
 All notifications can be paused, which removes them from being active in Slack channels, but not does not delete the underlying webhook so they can be added again.
 
-[IMAGE]
+<img src="https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/images/image1.png?raw=true" width="600">
 
 The delete notification button deletes the entire notification from Slack as well as the underlying webhook in the JFrog Platform. 
 
@@ -185,4 +182,4 @@ Outside the UI elements, you can also interact with our application using comman
 
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
-You can also click here for a list of [FAQ's](#).
+You can also click here for a list of [FAQ's](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/faq.md).
