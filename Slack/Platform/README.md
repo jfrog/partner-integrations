@@ -14,7 +14,7 @@ We know that software development happens in a myriad of collaboration environme
 
 # Support
 
-If you need help with this integration, please contact `partner_support@jfrog.com`
+If you need help with this integration, please contact `partner-support@jfrog.com`
 
 # Getting Started
 
