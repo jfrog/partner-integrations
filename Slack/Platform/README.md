@@ -18,9 +18,9 @@ If you need help with this integration, please contact `partner-support@jfrog.co
 
 # Getting Started
 
-If you do not already have Slack, download it now ([for Windows](https://slack.com/help/articles/209038037-Download-Slack-for-Windows) or [for Mac](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)).
+If you do not already have Slack, **download it now** ([for Windows](https://slack.com/help/articles/209038037-Download-Slack-for-Windows) or [for Mac](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)).
 
-Next, [Install the JFrog Slack Application using this link](https://slack-connector.jfrog.info/webhooks/slack/oauth/install-url).
+Next, **[Install the JFrog Slack Application using this link](https://slack-connector.jfrog.info/webhooks/slack/oauth/install-url)**.
 
 Make sure your organization has the latest cloud instance of Artifactory. If not, please upgrade or you can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/).
 
@@ -34,7 +34,9 @@ First, login to the JFrog platform. You must be an admin to access your credenti
 
 Next, go to the **Administration** section and then click on **Security**.
 
-Then click on **+ New Client Integration**. Provide it a name and then Generate your ID and Secret.
+Then click on **+ New Client Integration**. Provide it a name and then from the dropdown under Application, select Slack.
+
+Then click on **Next, Generate your ID and Secret.**.
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true" width="600">
 
@@ -56,7 +58,9 @@ We expect you to have Slack channels already setup - how you want to organize no
 
 Once logged in with Admin privileges, you can start creating notifications.
 
-Hit create notifications to bring up the list of options.
+Hit **Create Notification** to bring up the list of options.
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/imagec.png?raw=true" width="1000">
 
 Select which type notification you would like to create from the drop-down menu.
 
@@ -84,25 +88,22 @@ All notifications are based on webhook events in the JFrog Platform. The current
 
 ### Artifactory
 
-Artifact
-
-Artifact Properties
-
-Docker Tags
-
-Builds
-
-Release Bundles (Enterprise+)
-
-Distribution (Enterprise+)
+Type | Events
+------------ | -------------
+Artifact | *deployed, deleted, moved, copied*
+Artifact Properties | *added, deleted*
+Docker Tag | *pushed, deleted, promoted*
+Builds | *uploaded, deleted, promoted*
+Release Bundles (Enterprise+) | *created, signed, deleted*
+Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion started, deletion failed, deletion completed*
 
 ### Xray
 
-Security Violations by CVE
-
-Security Violations by Component (Summary view)
-
-License Compliance
+Type | Description
+------------ | -------------
+Security Violations by CVE | *This sends individual notification cards for each CVE or issue*
+Security Violations by Component (Summary view) | *This provides a summary of all CVEs and severities by component*
+License Compliance | *This sends individual notification cards for each license compliance issue*
 
 # Xray Notifications
 
@@ -134,6 +135,8 @@ The delete notification button deletes the entire notification from Slack as wel
 
 # List of Shortcuts
 
+Right under the text input area in Slack, you will see a lightning bolt symbol. Clicking on it brings up a list of 5 shortcuts that you can also use to create notifications and view lists. These shortcuts are:
+
 **Create Notifications**
 
 **List XR Notifications**
@@ -150,27 +153,27 @@ Outside the UI elements, you can also interact with our application using comman
 
 ### General
 
-/jfrog help - Show help content
+*/jfrog help* - Show help content
 
-/jfrog configure - Connects to your JFrog Instance and asks for JFrog URL, Integration ID, and Integration secret
+*/jfrog configure* - Connects to your JFrog Instance and asks for JFrog URL, Integration ID, and Integration secret
 
-/jfrog logout - Log out from the JFrog Platform with this Slack app
+*/jfrog logout* - Log out from the JFrog Platform with this Slack app
 
 ### Artifactory
 
-/jfrog rt notify list - Provides a list of current notifications subscribed to by the personal or channel
+*/jfrog rt notify list* - Provides a list of current notifications subscribed to by the personal or channel
 
-/jfrog rt notify stop <notification name> - Pauses subscription to the specified notification
+*/jfrog rt notify stop {notification name}* - Pauses subscription to the specified notification
 
-/jfrog rt notify resume <notification name> - Resumes subscription to the specified notification
+*/jfrog rt notify resume {notification name}* - Resumes subscription to the specified notification
 
 ### Xray
 
-/jfrog xr notify list - Provides a list of current xray notifications subscribed to by the personal or channel bot context
+*/jfrog xr notify list* - Provides a list of current xray notifications subscribed to by the personal or channel bot context
 
-/jfrog xr watch list - Provides a list of current watches (that user can has read access to) with a micro action to subscribe the bot to the notification
+*/jfrog xr watch list* - Provides a list of current watches (that user can has read access to) with a micro action to subscribe the bot to the notification
 
-/jfrog xr policy list - Provides a list of current policies with a micro action to open JFrog Platform.
+*/jfrog xr policy list* - Provides a list of current policies with a micro action to open JFrog Platform.
 
 # Requirements 
 
