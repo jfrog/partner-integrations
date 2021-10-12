@@ -185,4 +185,4 @@ Outside the UI elements, you can also interact with our application using comman
 
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
-You can also click here for a list of [FAQ's](https://github.com/Dattax/partner-integrations/blob/main/Slack/Platform/faq.md).
+You can also click here for a list of [FAQ's](https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/faq.md).
