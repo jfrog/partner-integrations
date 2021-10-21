@@ -32,7 +32,7 @@ Once you’ve installed the JFrog Slack Application from the Slack Store, you mu
 
 First, login to the JFrog platform. You must be an admin to access your credentials.
 
-Next, go to the **Administration** section and then click on **Security**.
+Next, go to the **Administration** section and then click on **Security**. Next, scroll down and click on **Integrations**.
 
 Then click on **+ New Client Integration**. Provide it a name and then from the dropdown under Application, select Slack.
 
