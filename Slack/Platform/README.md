@@ -20,7 +20,7 @@ If you need help with this integration, please contact `partner-support@jfrog.co
 
 If you do not already have Slack, **download it now** ([for Windows](https://slack.com/help/articles/209038037-Download-Slack-for-Windows) or [for Mac](https://slack.com/help/articles/207677868-Download-Slack-for-Mac)).
 
-Next, **[Install the JFrog Slack Application using this link](https://slack-connector.jfrog.info/webhooks/slack/oauth/install-url)**.
+Next, **[Install the JFrog Slack Application using this link](https://slack-connector.jfrog.info/webhooks/slack/oauth/install-url?utm_source=slack&utm_medium=wiki)**.
 
 Make sure your organization has the latest cloud instance of Artifactory. If not, please upgrade or you can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/).
 
