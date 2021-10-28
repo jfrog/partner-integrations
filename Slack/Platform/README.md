@@ -68,13 +68,13 @@ Select which type notification you would like to create from the drop-down menu.
 
 On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image8.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image8n.png?raw=true" width="600">
 
 You select a channel to send the notifications to. Hit **Next**.
 
 On the next screen, you may see options for your notification. For example, for build notifications, you can select any build or find an existing build (in your JFrog Platform Deployment) by name or pattern.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image9.png?raw=true" width="600">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image9n.png?raw=true" width="600">
 
 Once you hit **Next**, you should see a success message.
 
@@ -123,7 +123,7 @@ Give the Notification a name, which policy it is coming from, which channel to s
 
 **Example - by Component:**
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image10.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image10n.png?raw=true" width="800">
 
 ## Additionally:
 
