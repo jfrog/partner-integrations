@@ -8,7 +8,7 @@
   },
   "contributors": [
     "Alex Hung <alexh@jfrog.com>",
-    "Christian Bongiorno <christianb@jfrog.com>",
+    "Christian Bongiorno <christianb@jfrog.com>"
   ],
   "license": "ISC",
   "dependencies": {
