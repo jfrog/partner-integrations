@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alex Hung <alexh@jfrog.com>",
+  "contributors": [
+    "Alex Hung <alexh@jfrog.com>",
+    "Christian Bongiorno <christianb@jfrog.com>",
+  ],
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",
