@@ -25,10 +25,10 @@ Add JFrog Artifactory integration to an existing PagerDuty service or create a n
 1. From the **Configuration** menu, select **Services**.
 2. There are two ways to add an integration to a service:
    * **If you are adding your integration to an existing service**: Click the **name** of the service you want to add the integration to. Then, select the **Integrations** tab and click the **New Integration** button.
-   * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Artifactory + PagerDuty Notifications*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Artifactory Setup***  section (below) once you have finished these steps.
-3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Artifactory + PagerDuty Notifications***  from the Integration Type menu.
+   * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Artifactory Notifications*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Artifactory Setup***  section (below) once you have finished these steps.
+3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Artifactory Notifications***  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
-5. An **Integration Key** will be generated on this screen. Click on the integration name next to the integration key and copy the **integration URL** in a safe place as it will be used when you configure the integration with  ***JFrog Artifactory + PagerDuty Notifications***  in the next section.
+5. An **Integration Key** will be generated on this screen. Click on the integration name next to the integration key and copy the **integration URL** in a safe place as it will be used when you configure the integration with  ***JFrog Artifactory Notifications***  in the next section.
 ![integrations](images/integration.png)
 
 ## In JFrog Artifactory
@@ -53,5 +53,5 @@ Add JFrog Artifactory integration to an existing PagerDuty service or create a n
 # How to Uninstall
 1. Find the integration to delete by navigating to **Services** and selecting **Service Directory**
 2. Select the service with your integration and navigate to **Integrations** tab
-3. Navigate to the integration by clicking on the integration name (**JFrog Artifactory + PagerDuty Notifications**)
+3. Navigate to the integration by clicking on the integration name (**JFrog Artifactory Notifications**)
 4. Click on the **Delete Integration** button on the top right corner
