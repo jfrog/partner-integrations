@@ -1,5 +1,8 @@
 # PagerDuty + JFrog Artifactory Integration Benefits
-
+* **Incident control** during an incident, the user will be able to view recently completed jobs or builds that are relevant for the environment / area of stack. What versions are built, where they are being delivered. More information on Success / Failures
+* **Monitoring** performance, think number of artifacts served per second, latency in artifactory response time, artifactory up time
+* **Error Notifications** Alerting such that whenever there are errors
+* **Service Status** Inform on-call team if an API or a web application has issues, goes unavailable etc
 
 # How it Works
 * Users will install the JFrog Artifactory integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook within JFrog Artifactory
