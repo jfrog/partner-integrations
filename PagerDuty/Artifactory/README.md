@@ -30,14 +30,20 @@ Add JFrog Artifactory integration to an existing PagerDuty service or create a n
 
 ## In JFrog Artifactory
 1. Navigate to **General** in JFrog Platform's **Administration** section and click on it
+
 ![step1](images/step1.png)
+
 2. Click on **Webhooks**
 3. Create a **New webhook** for pagerduty
+
 ![new webhook](images/new_webhook.png)
+
 4. Enter **Webhook Name**
 5. Enter **URL** (URL is the Events API endpoint from pagerduty) _ex: https://events.pagerduty.com/integration/<integration_id>/enqueue_
 6. Select event from the list of Events
+
 ![event_selection](images/event_selection.png)
+
 7. Select specific Repositories or Builds or Release Bundles to get notified about
 8. Click **Create**
 
