@@ -17,6 +17,21 @@
 # Support
 If you need help with this integration, please contact `partner_support@jfrog.com`
 
+# Types of Supported Notifications
+
+All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
+
+### Artifactory
+
+Type | Events
+------------ | -------------
+Artifact | *deployed, deleted, moved, copied*
+Artifact Properties | *added, deleted*
+Docker Tag | *pushed, deleted, promoted*
+Builds | *uploaded, deleted, promoted*
+Release Bundles (Enterprise+) | *created, signed, deleted*
+Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion started, deletion failed, deletion completed*
+
 # Integration Walkthrough
 ## In PagerDuty
 Add JFrog Artifactory integration to an existing PagerDuty service or create a new service by following the steps below
