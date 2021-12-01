@@ -44,23 +44,23 @@ Add JFrog Artifactory integration to an existing PagerDuty service or create a n
 3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Artifactory Notifications***  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
 5. An **Integration Key** will be generated on this screen. Click on the integration name next to the integration key and copy the **integration URL** in a safe place as it will be used when you configure the integration with  ***JFrog Artifactory Notifications***  in the next section.
-![integrations](images/integration.png)
+![integrations](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/step1.png)
 
 ## In JFrog Artifactory
 1. Navigate to **General** in JFrog Platform's **Administration** section and click on it
 
-![step1](images/step1.png)
+![step1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/step1.png)
 
 2. Click on **Webhooks**
 3. Create a **New webhook** for pagerduty
 
-![new webhook](images/new_webhook.png)
+![new webhook](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/new_webhook.png)
 
 4. Enter **Webhook Name**
 5. Enter **URL** (URL is the Events API endpoint from pagerduty) _ex: https://events.pagerduty.com/integration/<integration_id>/enqueue_
 6. Select event from the list of Events
 
-![event_selection](images/event_selection.png)
+![event_selection](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/event_selection.png)
 
 7. Select specific Repositories or Builds or Release Bundles to get notified about
 8. Click **Create**
