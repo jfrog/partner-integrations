@@ -1,8 +1,6 @@
-# PagerDuty + JFrog Artifactory Integration Benefits
-* **Incident control** during an incident, the user will be able to view recently completed jobs or builds that are relevant for the environment / area of stack. What versions are built, where they are being delivered. More information on Success / Failures
-* **Monitoring** performance, think number of artifacts served per second, latency in artifactory response time, artifactory up time
-* **Error Notifications** Alerting such that whenever there are errors
-* **Service Status** Inform on-call team if an API or a web application has issues, goes unavailable etc
+# Welcome to the PagerDuty + JFrog Artifactory Integration. 
+
+Usually, when making software updates to your binaries and applications, your development teams don’t always have direct access to the metadata surrounding events (example: during the compilation of that code). Getting this information is especially important when you have different teams in charge of different parts of your software delivery pipeline. Our integration with PagerDuty allows this monitoring to take place so your on-call teams can monitor events in real-time.
 
 # How it Works
 * Users will install the JFrog Artifactory integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook within JFrog Artifactory
@@ -33,37 +31,76 @@ Release Bundles (Enterprise+) | *created, signed, deleted*
 Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion started, deletion failed, deletion completed*
 
 # Integration Walkthrough
-## In PagerDuty
-Add JFrog Artifactory integration to an existing PagerDuty service or create a new service by following the steps below
 
-### Integrating With a PagerDuty Service
-1. From the **Configuration** menu, select **Services**.
-2. There are two ways to add an integration to a service:
-   * **If you are adding your integration to an existing service**: Click the **name** of the service you want to add the integration to. Then, select the **Integrations** tab and click the **New Integration** button.
-   * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Artifactory Notifications*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Artifactory Setup***  section (below) once you have finished these steps.
-3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Artifactory Notifications***  from the Integration Type menu.
-4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
-5. An **Integration Key** will be generated on this screen. Click on the integration name next to the integration key and copy the **integration URL** in a safe place as it will be used when you configure the integration with  ***JFrog Artifactory Notifications***  in the next section.
-![integrations](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/step1.png)
+## Pre-Step: PagerDuty Setup
 
-## In JFrog Artifactory
-1. Navigate to **General** in JFrog Platform's **Administration** section and click on it
+First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab and do the following:
 
-![step1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/step1.png)
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image2.png)
 
-2. Click on **Webhooks**
-3. Create a **New webhook** for pagerduty
+Next, you'll need to take the following steps:
+1. Add Users
+2. Create an On-Call Schedule
+3. Create an Escalation Policy 
+4. Create a Service 
 
-![new webhook](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/new_webhook.png)
+You can refer to the [PagerDuty Quick Start Guide](https://support.pagerduty.com/docs/quick-start-guide) for more information regarding each of these pre-steps to setup your on-call schedule and team within PagerDuty. 
 
-4. Enter **Webhook Name**
-5. Enter **URL** (URL is the Events API endpoint from pagerduty) _ex: https://events.pagerduty.com/integration/<integration_id>/enqueue_
-6. Select event from the list of Events
+## Add the JFrog Integration as New Service:
 
-![event_selection](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/images/event_selection.png)
+Add JFrog Artifactory integration to an existing PagerDuty service or create a new service by following the steps below:
 
-7. Select specific Repositories or Builds or Release Bundles to get notified about
-8. Click **Create**
+First, you’ll need to create a new service. Navigate to **Services > Service Directory** and click **+New Service**.
+
+On the next screen, give your new service a name:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image9.png)
+
+Next, assign an escalation policy, or create a new one.
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image5.png)
+
+Next, select if you’d like intelligent, content-based, or time-based grouping.
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image10.png)
+
+Next, search for “jfrog” and select JFrog Artifactory Notifications. You’ll then click on the Create Service button.
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image12.png)
+
+You’ll now see the following information. Please copy the **Integration URL** as you’ll be using it to create your webhooks in the JFrog Platform:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image7.png)
+
+Once, you have created a service inside PagerDuty, you’ll need to login to your JFrog instance to create webhooks. These webhooks will send event data to PagerDuty an serve as the basis for your alerts.
+
+## Next, Setup Webhooks in JFrog Artifactory.
+
+First, please login to your JFrog Platform instance. 
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image6.png)
+
+Under the administration panel, click on **General > Webhooks**. Next, select **+ New Webhook** from the top-right corner.
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image4.png)
+
+Next, provide a name to your new webhook. After providing the name, please copy the Integration URL from PagerDuty and paste it where it says URL here:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image14.png)
+
+Then, select the types of events to include. In this example, we’re creating a Build webhook notification:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image8.png)
+
+Now, select the repositories to include in this webhook notification:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image13.png)
+
+Hit **Save**.
+
+At the bottom of the main screen, you can Test the notification, by selecting the **Test** button. 
+
+This will send your webhook event to your PagerDuty integration. After you have tested your webhook, hit **Create** and you’re done!
 
 # How to Uninstall
 1. Find the integration to delete by navigating to **Services** and selecting **Service Directory**
