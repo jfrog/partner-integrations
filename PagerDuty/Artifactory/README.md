@@ -102,6 +102,10 @@ At the bottom of the main screen, you can Test the notification, by selecting th
 
 This will send your webhook event to your PagerDuty integration. After you have tested your webhook, hit **Create** and you’re done!
 
+Once you have tested and finish creating your webhooks, you can see them as alerts in PagerDuty:
+
+![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image15.png)
+
 # How to Uninstall
 1. Find the integration to delete by navigating to **Services** and selecting **Service Directory**
 2. Select the service with your integration and navigate to **Integrations** tab
