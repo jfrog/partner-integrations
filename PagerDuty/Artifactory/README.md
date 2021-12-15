@@ -36,7 +36,7 @@ Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion start
 
 First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab and do the following:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image2.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image2.png" width="900">
 
 Next, you'll need to take the following steps:
 1. Add Users
@@ -53,24 +53,23 @@ Add JFrog Artifactory integration to an existing PagerDuty service or create a n
 First, you’ll need to create a new service. Navigate to **Services > Service Directory** and click **+New Service**.
 
 On the next screen, give your new service a name:
-
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image9.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image9.png" width="900">
 
 Next, assign an escalation policy, or create a new one.
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image5.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image5.png" width="900">
 
 Next, select if you’d like intelligent, content-based, or time-based grouping.
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image10.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image10.png" width="900">
 
 Next, search for “jfrog” and select JFrog Artifactory Notifications. You’ll then click on the Create Service button.
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image12.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image12.png" width="900">
 
 You’ll now see the following information. Please copy the **Integration URL** as you’ll be using it to create your webhooks in the JFrog Platform:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image7.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image7.png" width="900">
 
 Once, you have created a service inside PagerDuty, you’ll need to login to your JFrog instance to create webhooks. These webhooks will send event data to PagerDuty an serve as the basis for your alerts.
 
@@ -78,23 +77,23 @@ Once, you have created a service inside PagerDuty, you’ll need to login to you
 
 First, please login to your JFrog Platform instance. 
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image6.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image6.png" width="900">
 
 Under the administration panel, click on **General > Webhooks**. Next, select **+ New Webhook** from the top-right corner.
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image4.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image4.png" width="900">
 
 Next, provide a name to your new webhook. After providing the name, please copy the Integration URL from PagerDuty and paste it where it says URL here:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image14.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image14.png" width="900">
 
 Then, select the types of events to include. In this example, we’re creating a Build webhook notification:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image8.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image8.png" width="900">
 
 Now, select the repositories to include in this webhook notification:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image13.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image13.png" width="900">
 
 Hit **Save**.
 
@@ -104,7 +103,7 @@ This will send your webhook event to your PagerDuty integration. After you have 
 
 Once you have tested and finish creating your webhooks, you can see them as alerts in PagerDuty:
 
-![pagerduty1](https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image15.png)
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image15.png" width="900">
 
 # How to Uninstall
 1. Find the integration to delete by navigating to **Services** and selecting **Service Directory**
