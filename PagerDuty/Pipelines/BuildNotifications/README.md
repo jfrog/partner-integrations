@@ -21,20 +21,14 @@ Add JFrog Pipelines integration to an existing PagerDuty service or create a new
 1. From the **Configuration** menu, select **Services**.
 2. There are two ways to add an integration to a service:
    * **If you are adding your integration to an existing service**: Click the **name** of the service you want to add the integration to. Then, select the **Integrations** tab and click the **New Integration** button.
-   * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Pipelines + PagerDuty Notifications*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Pipelines Setup***  section (below) once you have finished these steps.
+   * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Pipelines Changes*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Pipelines Setup***  section (below) once you have finished these steps.
 3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Pipelines + PagerDuty Notifications***  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
-5. An **Integration Key** will be generated on this screen. This key can be stored into JFrog Pipelines as a resource or used directly as the `--routingkey` flag to `send_notification` in the yaml of a JFrog Pipeline.
+5. An **Integration Key** will be on this screen. This is the key that is called alternatively `routingKey` if used directly as the `--routingkey` flag to `send_notification` in the yaml of a JFrog Pipeline, or `integration` key when configuring the UI in pipelines. 
+This confusion is inherited from the inconsistencies in the [PagerDuty api docs](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgy-send-a-change-event) 
 ![IntegrationKey](https://github.com/narayanss-jf/partner-integrations/blob/main/PagerDuty/Pipelines/BuildNotifications/IntegrationKey.png)
+![IntegrationKey](https://github.com/narayanss-jf/partner-integrations/blob/main/PagerDuty/Pipelines/BuildNotifications/IntegrationKey2.png)
 
-#### Creating a PagerDuty API Token
-An API token is also required for the JFrog Pipelines + Pagerduty Notifications integration. 
-
-1. Click on your avatar in the top right and `My Profile`
-![MyProfile](https://github.com/narayanss-jf/partner-integrations/blob/main/PagerDuty/Pipelines/BuildNotifications/MyProfile.png)
-2. Click on the `User Settings` tab and inside the `API Access` section click on `Create API User Token`
-![APIToken](https://github.com/narayanss-jf/partner-integrations/blob/main/PagerDuty/Pipelines/BuildNotifications/APIToken.png)
-3. Save the token we will use this when creating the integration in JFrog Pipelines for PagerDuty.
 
 
 ### In JFrog Pipelines
