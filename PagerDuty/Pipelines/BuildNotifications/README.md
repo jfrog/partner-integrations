@@ -39,7 +39,7 @@ This confusion is inherited from the inconsistencies in the [PagerDuty api docs]
 3. Select `PagerDuty Events` for the integration type
 ![AddNewIntegration](images/AddNewIntegration.png)
 4. Enter a name for this integration which will be used in the pipeline yaml. ex: `MyPagerDutyIntegration`
-5. Enter the Pagerduty API token created in prior steps.
+5. Enter the Pagerduty `Integration Key` created in prior steps.
 6. Click Create
 
 #### Creating a Pipelines Build YAML
@@ -47,7 +47,6 @@ This confusion is inherited from the inconsistencies in the [PagerDuty api docs]
 2. Create a new Pipelines integration for your SCM provider. [Visit the official documentation.](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipelines+Integrations)
 3. Create a new pipeline YAML definition that uses the new PagerDuty Events integration above to send build notifications to PagerDuty.
 4. Replace `<MyPagerDutyIntegration>` with the name of the Pipelines integration for Pagerduty
-5. Replace `<PagerDutyIntegrationKey>` with the integration key obtained from PagerDuty service UI.
 ````text
 resources:
   - name: pagerDutyGitRepo
@@ -67,7 +66,7 @@ pipelines:
             - name: pagerDutyGitRepo
         execution:
           onExecute:
-            - send_notification <MyPagerDutyIntegration> --text "<Your message>"
+           - send_notification <MyPagerDutyIntegration> --text "<Your message>"
 ````
 Commit the pipeline yaml to your SCM provider and then [follow the official steps on adding a pipeline](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipeline+Sources#ManagingPipelineSources-AddingaPipelineSource). 
 
