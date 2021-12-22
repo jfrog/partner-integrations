@@ -24,7 +24,7 @@ Add JFrog Pipelines integration to an existing PagerDuty service or create a new
    * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting ***JFrog Pipelines Changes*** as the **Integration Type** in step 4. Continue with the In  ***JFrog Pipelines Setup***  section (below) once you have finished these steps.
 3. Enter an **Integration Name** in the format `JFrog` and select  ***JFrog Pipelines + PagerDuty Notifications***  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
-5. An **Integration Key** will be on this screen. This is the key that is called alternatively `routingKey` if used directly as the `--routingkey` flag to `send_notification` in the yaml of a JFrog Pipeline, or `integration` key when configuring the UI in pipelines. 
+5. An **Integration Key** will be on this screen. This is the key that is called `service integration/routing key` when configuring the UI in pipelines. 
 This confusion is inherited from the inconsistencies in the [PagerDuty api docs](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgy-send-a-change-event) 
 ![IntegrationKey](images/IntegrationKey.png)
 ![IntegrationKey](images/IntegrationKey2.png)
@@ -67,7 +67,7 @@ pipelines:
             - name: pagerDutyGitRepo
         execution:
           onExecute:
-            - send_notification <MyPagerDutyIntegration> --routingkey "<PagerDutyIntegrationKey>" --text "<Your message>"
+            - send_notification <MyPagerDutyIntegration> --text "<Your message>"
 ````
 Commit the pipeline yaml to your SCM provider and then [follow the official steps on adding a pipeline](https://www.jfrog.com/confluence/display/JFROG/Managing+Pipeline+Sources#ManagingPipelineSources-AddingaPipelineSource). 
 
