@@ -5,8 +5,8 @@ Usually, when making software updates to your binaries and applications, your de
 # How it Works
 * Users will install the JFrog Artifactory integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook within JFrog Artifactory
 * JFrog Artifactory will utilize the PagerDuty webhook trigger to send notifications to PagerDuty.  Users will be able to configure their webhook events for repositories, builds and release bundles within JFrog Artifactory and associate these events with the PagerDuty webhook trigger. 
-* Once the webhook is configured within JFrog Artifactory, an incident will be sent to the PagerDuty service whenever an event occurs.
-* Artifactory performs a recheck of all selected repositories, builds and release bundles and any events generated will be sent as an event to a service in PagerDuty. Events from Artifactory will trigger a new incident on the corresponding PagerDuty service, or group as alerts into an existing incident.
+* Once the webhook is configured within JFrog Artifactory, an change event will be sent to the PagerDuty service whenever an event occurs.
+* Artifactory performs a recheck of all selected repositories, builds and release bundles and any events generated will be sent as an event to a service in PagerDuty. Events from Artifactory will trigger a new change event on the corresponding PagerDuty service, or group as alerts into an existing recent change event.
 
 # Requirements
 * PagerDuty integration requires an admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
@@ -101,7 +101,7 @@ At the bottom of the main screen, you can Test the notification, by selecting th
 
 This will send your webhook event to your PagerDuty integration. After you have tested your webhook, hit **Create** and you’re done!
 
-Once you have tested and finish creating your webhooks, you can see them as alerts in PagerDuty:
+Once you have tested and finish creating your webhooks, you can see them as recent changes in PagerDuty:
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image15.png" width="900">
 
