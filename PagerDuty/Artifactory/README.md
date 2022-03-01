@@ -34,17 +34,9 @@ Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion start
 
 ## Pre-Step: PagerDuty Setup
 
-First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab and do the following:
+First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab to get started. You can refer to the [PagerDuty Quick Start Guide](https://support.pagerduty.com/docs/quick-start-guide) for more information regarding each of these pre-steps to setup your recent changes timelines within PagerDuty. 
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image2.png" width="900">
-
-Next, you'll need to take the following steps:
-1. Add Users
-2. Create an On-Call Schedule
-3. Create an Escalation Policy 
-4. Create a Service 
-
-You can refer to the [PagerDuty Quick Start Guide](https://support.pagerduty.com/docs/quick-start-guide) for more information regarding each of these pre-steps to setup your on-call schedule and team within PagerDuty. 
 
 ## Add the JFrog Integration as New Service:
 
@@ -55,15 +47,7 @@ First, you’ll need to create a new service. Navigate to **Services > Service D
 On the next screen, give your new service a name:
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image9.png" width="900">
 
-Next, assign an escalation policy, or create a new one.
-
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image5.png" width="900">
-
-Next, select if you’d like intelligent, content-based, or time-based grouping.
-
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image10.png" width="900">
-
-Next, search for “jfrog” and select JFrog Artifactory Notifications. You’ll then click on the Create Service button.
+After you get to step 4, search for “jfrog” and select JFrog Artifactory Notifications. You’ll then click on the Create Service button.
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image12.png" width="900">
 
