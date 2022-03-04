@@ -3,13 +3,15 @@
 Usually, when making software updates to your binaries and applications, your development teams don’t always have direct access to the metadata surrounding events (example: during the compilation of that code). Getting this information is especially important when you have different teams in charge of different parts of your software delivery pipeline. Our integration with PagerDuty allows this monitoring to take place so your on-call teams can monitor events in real-time.
 
 # How it Works
-* Users will install the JFrog Artifactory integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook within JFrog Artifactory
-* JFrog Artifactory will utilize the PagerDuty webhook trigger to send notifications to PagerDuty.  Users will be able to configure their webhook events for repositories, builds and release bundles within JFrog Artifactory and associate these events with the PagerDuty webhook trigger. 
-* Once the webhook is configured within JFrog Artifactory, an change event will be sent to the PagerDuty service whenever an event occurs.
-* Artifactory performs a recheck of all selected repositories, builds and release bundles and any events generated will be sent as an event to a service in PagerDuty. Events from Artifactory will trigger a new change event on the corresponding PagerDuty service, or group as alerts into an existing recent change event.
+* Users will install the JFrog Artifactory integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook events within JFrog Artifactory.
+* JFrog Artifactory will utilize the PagerDuty webhook trigger to send notifications to PagerDuty.  Users will be able to configure their webhook events for repositories, builds, artifact properties, and release bundles within JFrog Artifactory and associate these events with the PagerDuty webhook trigger. 
+* Once the webhook is configured within JFrog Artifactory, a change event alert will be available within the PagerDuty service whenever an event occurs.
+* Artifactory performs a re-check of all selected repositories, builds, artifact properties, and release bundles and any events generated will be sent as a change event to the service in PagerDuty. Events from Artifactory will trigger a new change event on the corresponding PagerDuty service, or group them as alerts into an existing change event.
+
+Users may review change events within a PagerDuty service’s recent activity area during incident triage or hypercare. They can also see recent changes on incidents of that service, and navigate across all changes in a comprehensive list of recent changes across all services.
 
 # Requirements
-* PagerDuty integration requires an admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
+* PagerDuty integration requires an Admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
 * JFrog Artifactory requires an Admin based role with administrative privileges to configure the integration.  If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
 
 # Support
@@ -34,7 +36,7 @@ Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion start
 
 ## Pre-Step: PagerDuty Setup
 
-First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab to get started. You can refer to the [PagerDuty Quick Start Guide](https://support.pagerduty.com/docs/quick-start-guide) for more information regarding each of these pre-steps to setup your recent changes timelines within PagerDuty. 
+First, if you don’t already have one, you’ll need to register an account with PagerDuty. Then, once logged into PagerDuty, you’ll hover over the People tab to get started. You can refer to the [PagerDuty Quick Start Guide](https://support.pagerduty.com/docs/quick-start-guide) for more information regarding each of these pre-steps to setup and associate your recent changes with a service within PagerDuty. 
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/PagerDuty/Artifactory/img/image2.png" width="900">
 
