@@ -32,13 +32,15 @@ Once you’ve installed the JFrog Slack Application from the Slack Store, you mu
 
 First, login to the JFrog platform. You must be an admin to access your credentials.
 
-Next, go to the **Administration** section and then click on **Security**. Next, scroll down and click on **Integrations**.
+A) If you are an JFrog Platform paid user, go to **General** tab and look for **Applications**. From there, you can add a new application.
+
+Then click on **Next, Generate your ID and Secret.**.
+
+B) If you are using the free version of the JFrog Platform, go to the **Administration** section and then click on **Security**. Next, scroll down and click on **Integrations**.
 
 Then click on **+ New Client Integration**. Provide it a name and then from the dropdown under Application, select Slack.
 
 Then click on **Next, Generate your ID and Secret.**.
-
-<img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image5.png?raw=true" width="600">
 
 When you have your **Integration ID and Secret**, copy and paste these items into the Slack modal window.
 
