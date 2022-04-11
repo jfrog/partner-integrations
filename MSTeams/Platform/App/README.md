@@ -1,38 +1,39 @@
 
 # Microsoft Teams 
 
-This integration is between JFrog Artifactory and Microsoft Teams. We know that software development happens in a myriad of tools and collaboration environments. Today there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged in. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
+Today, there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged into the platform. When it comes to people across different departments in an organization knowing what’s going on, it’s imperative that events that affect artifacts and repositories be made more visible. 
+
+This integration is between the JFrog Platform and Microsoft Teams. The main features of this integration include notifications coming from JFrog Xray, Artifactory, and Distribution. Build Information is also available.
 
 # How it Works
 
-* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, and Build events through notifications and actionable cards inside the Microsoft Teams browser.  
-
-# Requirements
-
-* You must be a user with Admin permissions to generate a JPD key.
-* You should have a cloud instance of Artifactory. You can signup for a free cloud instance at: https://jfrog.com/start-free/
+* This integration allows you the ability to see Artifact, Artifact Properties, Docker Tag, and Build events through notifications and cards where you can take actions that interact back with the JFrog Platform.
+* Additionally, you can get vulnerability and license compliance notifications based on policies setup in JFrog Xray. 
+* If you are an Enterprise user, you can also get notifications around release bundle and distribution events. 
 
 # Support
 
 If you need help with this integration, please contact `partner_support@jfrog.com`
 
-# Getting Started
+# Types of Supported Notifications
 
-The first thing to do is to download the Microsoft Teams Application. 
+All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
 
-Next, install the JFrog app.
+### Artifactory
 
-Then, configure your JFrog instance.
+Type | Events
+------------ | -------------
+Artifact | *deployed, deleted, moved, copied*
+Artifact Properties | *added, deleted*
+Docker Tag | *pushed, deleted, promoted*
+Builds | *uploaded, deleted, promoted*
+Release Bundles (Enterprise+) | *created, signed, deleted*
+Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion started, deletion failed, deletion completed*
 
-Next, login to your JFrog account. 
+### Xray
 
-Once logged in with admin privledges, you can start creating notifications. 
-
-Hit **create notifications** to bring up the list of options. 
-
-Select which type notification you would like to create from the drop-down menu. 
-
-On the next screen, name the notification, select which events you would like to include in the notification, and which repos should be included. You can also setup include/exclude pattens and select a channel to send the notifications to.
-
-Once you have setup notifications, you should start seeing the notification cards in the channel within 20 minutes.
-
+Type | Description
+------------ | -------------
+Security Violations by CVE | *This sends individual notification cards for each CVE or issue*
+Security Violations by Component (Summary view) | *This provides a summary of all CVEs and severities by component*
+License Compliance | *This sends individual notification cards for each license compliance issue*
