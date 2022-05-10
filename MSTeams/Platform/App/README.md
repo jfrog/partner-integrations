@@ -14,7 +14,6 @@ With the JFrog app for Teams, developers can better collaborate on delivering qu
 * Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. 
 
 <img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-1.png?raw=true" width="800">
- *Example Image*
 
 # Requirements 
 
@@ -55,6 +54,8 @@ License Compliance | *This sends individual notification cards for each license 
 
 # Getting Started
 
+Follow the instructions below or [watch the video examples](#) for more help on how to get started using the app.
+
 ## Install Microsoft Teams
 
 The first thing to do is to download the Microsoft Teams Application. 
@@ -63,13 +64,13 @@ You can learn how to [download and install Microsoft Teams here](https://www.mic
 
 Once, you have Microsoft Teams, you can add the JFrog application by navigation to the lower left-hand corner and clicking on the icon called Apps.
 
-*Image Example ms-2.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-2.png?raw=true" width="800">
 
 Then, in the search bar, type in “JFrog” and look for the JFrog app*.
 
 *Now, before you add the JFrog app, you must have a team created in your Microsoft Teams browser. If you do not, please create a team.
 
-*Image Example ms-3.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-3.png?raw=true" width="800">
 
 Click on the app and a window will open that has an “Add to Team” button. Click on that button and select the team you want. 
 
@@ -81,7 +82,7 @@ Once you’ve added the JFrog Application from the Microsoft Teams browser, you 
 
 The first message you will see from the JFrog Bot is going to be an introduction card that asks you to **Connect JFrog Platform**. Click on that button.
 
-*Image Example ms-4.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-4.png?raw=true" width="800">
 
 Now, you will need to login to your JFrog instance with Admin credentials. Once logged in, navigate to the **Administration > General > Applications** area.
 
@@ -92,11 +93,11 @@ Then click on **+ New Client Integration**. Provide it a name and then click on 
 
 Next, under Integration ID and Secret, click on the button: **Generate your ID and Secret**.
 
-*Image Example ms-5.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-5.png?raw=true" width="800">
 
 When you have your Integration ID and Secret, copy and paste these items into the modal window.
 
-*Image Example ms-6.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-6.png?raw=true" width="800">
 
 Last, copy and paste your JFrog Platform URL (found at the top of your browser window) into the modal window where it says JFrog Platform URL.
 
@@ -112,19 +113,19 @@ Once you see the confirmation message, you can create new notifications and add 
  
 Click on **Create Notification**. 
 
-*Image Example ms-7.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-7.png?raw=true" width="800">
 
 From the window that appears, use the drop-down to select the notification type you want to create. In this example, we’ll select **Artifact Properties**. 
 
-*Image Example ms-8.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-8.png?raw=true" width="800">
 
 On the next screen, give the notification a name followed by selecting which kinds of artifact properties events you want to get notified about.
 
-*Image Example ms-9.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-9.png?raw=true" width="800">
 
 Last, you’ll want to choose which repositories you can get notified from. You have the option of selecting **Any Local** and **Any Remote** or you can scroll down and select specific repositories using the drop-down selection.
 
-*Image Example ms-10.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-10.png?raw=true" width="800">
 
 Click on the Create button at the bottom of the window and you will see a Success message appear. You can now close this window and go back to the channel. 
 
@@ -134,13 +135,13 @@ Congrats!!! You should receive one notification for every event type used in the
 
  If you want to test the notification, navigate to the JFrog Platform and go to Administration > General > Webhooks.
  
- *Image Example ms-11.png*
+ <img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-11.png?raw=true" width="800">
  
  Look for the name of the notification you created and click on it. 
 
 On the bottom right-hand corner, click on the **Test** button.
 
- *Image Example ms-12.png*
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-12.png?raw=true" width="800">
  
  You should get a confirmation in the JFrog Platform that a dummy webhook was sent. 
 
@@ -148,5 +149,15 @@ If you navigate back to the Microsoft Teams, you will see this information in th
 
 **NOTE**: It can take up to 2-4 minutes to receive all notifications.
 
+# How to Sign Out and Uninstall
 
+To sign out of the application, click on **Help** or type /jfrog help
+
+A message will show up with a button that allows you to **Sign Out** of the JFrog Bot. 
+
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-out.png?raw=true" width="800">
+
+Please note that signing out does not disconfigure the JFrog Platform from the JFrog Bot in Microsoft Teams. To disable the connection between your JFrog Platform instance and the JFrog bot in Microsoft Teams, you can use the **Disconnect JFrog Platform** button.
+
+To completely uninstall application, [follow the instructions here](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d)
 
