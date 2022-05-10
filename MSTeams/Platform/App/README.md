@@ -1,38 +1,152 @@
 
 # Microsoft Teams 
 
-This integration is between JFrog Artifactory and Microsoft Teams. We know that software development happens in a myriad of tools and collaboration environments. Today there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged in. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
+This integration is between the JFrog Platform and Microsoft Teams. 
+
+We know that software development happens in a myriad of tools and collaboration environments. As your mission-critical tools for DevOps, the results of many key events that occur in Artifactory and Xray reveal whether or not your software pipeline is on-track to deliver production-quality releases. The JFrog app for Microsoft Teams brings real-time visibility and awareness of what’s happening in your JFrog-powered software pipelines to your entire team through one of the most widely used collaboration tools. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
+
+With the JFrog app for Teams, developers can better collaborate on delivering quality releases, responding in real-time to DevOps events as they occur.
 
 # How it Works
 
-* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, and Build events through notifications and actionable cards inside the Microsoft Teams browser.  
+* This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, Distribution and Build events through notifications and actionable cards inside the Microsoft Teams browser.  
+* You can send these notifications to multiple teams and channels.
+* Additionally, you can get vulnerability and license compliance notification based on policies setup in JFrog Xray and take actions. 
 
-# Requirements
+<img src="https://github.com/jfrog/partner-integrations/tree/main/MSTeams/Platform/App/images/ms-1.png?raw=true" width="800">
+ *Example Image*
 
-* You must be a user with Admin permissions to generate a JPD key.
-* You should have a cloud instance of Artifactory. You can signup for a free cloud instance at: https://jfrog.com/start-free/
+# Requirements 
+
+* Your organization should have a cloud instance of the JFrog Platform version 7.27 or above. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
+
+* You must be a user with Admin permissions to authenticate your organization’s app with your JFrog Platform Deployment (JPD).
+
+* You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. 
+
+* Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
 # Support
 
 If you need help with this integration, please contact `partner_support@jfrog.com`
 
+# Types of Supported Notifications
+
+All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
+
+### Artifactory
+
+Type | Events
+------------ | -------------
+Artifact | *deployed, deleted, moved, copied*
+Artifact Properties | *added, deleted*
+Docker Tag | *pushed, deleted, promoted*
+Builds | *uploaded, deleted, promoted*
+Release Bundles (Enterprise+) | *created, signed, deleted*
+Distribution (Enterprise+) | *stared, completed, aborted, failed, deletion started, deletion failed, deletion completed*
+
+### Xray
+
+Type | Description
+------------ | -------------
+Security Violations by CVE | *This sends individual notification cards for each CVE or issue*
+Security Violations by Component (Summary view) | *This provides a summary of all CVEs and severities by component*
+License Compliance | *This sends individual notification cards for each license compliance issue*
+
 # Getting Started
+
+## Install Microsoft Teams
 
 The first thing to do is to download the Microsoft Teams Application. 
 
-Next, install the JFrog app.
+You can learn how to [download and install Microsoft Teams here](https://www.microsoft.com/en-us/microsoft-teams/download-app).
 
-Then, configure your JFrog instance.
+Once, you have Microsoft Teams, you can add the JFrog application by navigation to the lower left-hand corner and clicking on the icon called Apps.
 
-Next, login to your JFrog account. 
+*Image Example ms-2.png*
 
-Once logged in with admin privledges, you can start creating notifications. 
+Then, in the search bar, type in “JFrog” and look for the JFrog app*.
 
-Hit **create notifications** to bring up the list of options. 
+*Now, before you add the JFrog app, you must have a team created in your Microsoft Teams browser. If you do not, please create a team.
 
-Select which type notification you would like to create from the drop-down menu. 
+*Image Example ms-3.png*
 
-On the next screen, name the notification, select which events you would like to include in the notification, and which repos should be included. You can also setup include/exclude pattens and select a channel to send the notifications to.
+Click on the app and a window will open that has an “Add to Team” button. Click on that button and select the team you want. 
 
-Once you have setup notifications, you should start seeing the notification cards in the channel within 20 minutes.
+Then click on **Set up a bot** button to finish installing the JFrog app with Microsoft Teams.
+
+Once you’ve added the JFrog Application from the Microsoft Teams browser, you must connect the application to your JFrog Platform Deployment (or JPD) instance. 
+
+## How to Configure the JPD 
+
+The first message you will see from the JFrog Bot is going to be an introduction card that asks you to **Connect JFrog Platform**. Click on that button.
+
+*Image Example ms-4.png*
+
+Now, you will need to login to your JFrog instance with Admin credentials. Once logged in, navigate to the **Administration > General > Applications** area.
+
+*In the free JFrog Platform versions, this information can be found under:
+**Administration > Security > Integrations**.
+
+Then click on **+ New Client Integration**. Provide it a name and then click on the application dropdown and select the **JFrog Collaboration Integration**.
+
+Next, under Integration ID and Secret, click on the button: **Generate your ID and Secret**.
+
+*Image Example ms-5.png*
+
+When you have your Integration ID and Secret, copy and paste these items into the modal window.
+
+*Image Example ms-6.png*
+
+Last, copy and paste your JFrog Platform URL (found at the top of your browser window) into the modal window where it says JFrog Platform URL.
+
+Hit Save and look for the success message! Great, you have now connected your organization’s JFrog account to the Microsoft Teams app.
+
+Next, there will be a window that asks you to **Sign In**. Login to the JFrog Platform with your credentials and **Allow** the Microsoft Teams JFrog application to authenticate to the JFrog Platform.
+
+## Create an Artifactory Notification
+
+Once you see the confirmation message, you can create new notifications and add them to your Microsoft Teams channel.
+ 
+*We expect you to have your channels already setup - how you want to organize notifications to various teams and channels is up to your organization.
+ 
+Click on **Create Notification**. 
+
+*Image Example ms-7.png*
+
+From the window that appears, use the drop-down to select the notification type you want to create. In this example, we’ll select **Artifact Properties**. 
+
+*Image Example ms-8.png*
+
+On the next screen, give the notification a name followed by selecting which kinds of artifact properties events you want to get notified about.
+
+*Image Example ms-9.png*
+
+Last, you’ll want to choose which repositories you can get notified from. You have the option of selecting **Any Local** and **Any Remote** or you can scroll down and select specific repositories using the drop-down selection.
+
+*Image Example ms-10.png*
+
+Click on the Create button at the bottom of the window and you will see a Success message appear. You can now close this window and go back to the channel. 
+
+Congrats!!! You should receive one notification for every event type used in the notification.
+
+**Test the notification:**
+
+ If you want to test the notification, navigate to the JFrog Platform and go to Administration > General > Webhooks.
+ 
+ *Image Example ms-11.png*
+ 
+ Look for the name of the notification you created and click on it. 
+
+On the bottom right-hand corner, click on the **Test** button.
+
+ *Image Example ms-12.png*
+ 
+ You should get a confirmation in the JFrog Platform that a dummy webhook was sent. 
+
+If you navigate back to the Microsoft Teams, you will see this information in the UI. 
+
+**NOTE**: It can take up to 2-4 minutes to receive all notifications.
+
+
 
