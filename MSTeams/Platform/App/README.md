@@ -52,6 +52,18 @@ Security Violations by CVE | *This sends individual notification cards for each 
 Security Violations by Component (Summary view) | *This provides a summary of all CVEs and severities by component*
 License Compliance | *This sends individual notification cards for each license compliance issue*
 
+### Commands
+
+In the Micrsoft Teams chat area, typing in **@jfrog** followed by one of these commands, will result in the following actions:
+
+Type | Action
+------------ | -------------
+help | This will show the menu of available options on the app
+connect | This will provide the ability to connect to the JPD
+disconnect | This will let you disconnect from the JPD 
+login | Sign in user to JPD
+logout | Sign out user from JPD
+
 # Getting Started
 
 Follow the instructions below or [watch the video examples](#) for more help on how to get started using the app.
