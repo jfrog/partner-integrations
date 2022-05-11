@@ -8,7 +8,9 @@ Focused on Xray-related actions: from generation violations reports to creating 
 
 ServiceNow Spokes are applications with predefined actions that customers can use to build workflows on the NOW Platform. The JFrog Spoke has actions that can be combined with other native Spokes from ServiceNow and other third-party tools to create enterprise-grade workflows for vulnerability and change management for all your ITSM needs.
 
-## Features Include:
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/ms-2.png" width="800">
+
+## Major Features Include:
 
 * Track Xray Vulnerabilities
 * Track License Violations
@@ -24,3 +26,47 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 If you need help with this integration, please contact `partner-support@jfrog.com`
 
 # Getting Started
+
+## Example 1: Build Your First Xray Flow
+
+*pending*
+
+First, to start use the JFrog Xray Spoke, you must be an Admin of your JFrog Platform Instance so you can create the initial webhook needed for Xray. 
+
+If you do not already have an Xray Watch and Policy created, this will be required to setup violations. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
+
+Next, in your organization's ServiceNow instance, go to **Integration Hub** > **Flow Designer** > **New** > **Flow**
+
+Create a New Flow. 
+
+Next, for the Trigger > select **REST API - Asynchronous**
+
+This will then bring in the Xray violations payload data into ServiceNow so we can parse it and use the information to build out our flows.
+
+Next, select **Actions**
+
+Then, search for **JFrog Create Violation Record**. This will load up the Xray violation data (via webhook in the JFrog Platform) and make it available to all the Spoke actions. 
+
+Next, you can use that action to create a flow such as this example, **“For Each”** Violation Record where the severity is high, take an action:
+
+## Next: Watch the Video
+
+[To watch a video of these examples and learn more, click here.](#)
+
+## List of Supported Actions
+
+Name | Description
+------------ | -------------
+Example | Example Description
+Example | Example Description
+Example | Example Description
+
+## Requirements:
+
+* Your organization should have a cloud instance of the JFrog Platform version 7.27 or above. You can signup for a free cloud instance at: https://jfrog.com/start-free/
+
+* You must be a user with Admin permissions to create the initial webhooks for Artifactory and Xray.
+
+* Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
+
+* Your organization must already be have an active subscription to ServiceNow with access to IntegrationHub Spokes
