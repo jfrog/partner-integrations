@@ -7,7 +7,7 @@ We know that software development happens in a myriad of tools and collaboration
 
 With the JFrog app for Teams, developers can better collaborate on delivering quality releases, responding in real-time to DevOps events as they occur.
 
-**[Watch this video](https://youtu.be/HRDOGM1MdAo) to see what it looks like to create your first notification.**
+**[Watch this video](https://youtu.be/nAuL8NruiNk) to see what it looks like to create your first notification.**
 
 # How it Works
 
