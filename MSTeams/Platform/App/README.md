@@ -1,11 +1,13 @@
 
 # Microsoft Teams 
 
-This integration is between the JFrog Platform and Microsoft Teams. 
+This integration is between the JFrog Platform and Microsoft Teams that focuses on notifications from the JFrog Platform.
 
 We know that software development happens in a myriad of tools and collaboration environments. As your mission-critical tools for DevOps, the results of many key events that occur in Artifactory and Xray reveal whether or not your software pipeline is on-track to deliver production-quality releases. The JFrog app for Microsoft Teams brings real-time visibility and awareness of what’s happening in your JFrog-powered software pipelines to your entire team through one of the most widely used collaboration tools. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
 
 With the JFrog app for Teams, developers can better collaborate on delivering quality releases, responding in real-time to DevOps events as they occur.
+
+**[Watch this video](https://youtu.be/HRDOGM1MdAo) to see what it looks like to create your first notification.**
 
 # How it Works
 
