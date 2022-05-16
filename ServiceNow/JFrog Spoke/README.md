@@ -29,7 +29,7 @@ If you need help with this integration, please contact `partner-support@jfrog.co
 
 ## Example 1: Build Your First Xray Flow
 
-*pending*
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/img3.png" width="400">
 
 First, to start use the JFrog Xray Spoke, you must be an Admin of your JFrog Platform Instance so you can create the initial webhook needed for Xray. 
 
@@ -41,6 +41,16 @@ Create a New Flow.
 
 Next, for the Trigger > select **REST API - Asynchronous**
 
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/i1.png" width="800">
+
+The ServiceNow + Path is the full webhook URL that needs to be added to Xray.
+
+Once that is done, Xray should be setup to send violation data to ServiceNow. For ServiceNow to be able to read these violation records we need to define the complex object of the response body as follows: 
+
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/i2.png" width="800">
+
+This will allow ServiceNow to read the incoming application json. 
+
 This will then bring in the Xray violations payload data into ServiceNow so we can parse it and use the information to build out our flows.
 
 Next, select **Actions**
@@ -49,17 +59,47 @@ Then, search for **JFrog Create Violation Record**. This will load up the Xray v
 
 Next, you can use that action to create a flow such as this example, **“For Each”** Violation Record where the severity is high, take an action:
 
+**Action**: JFrog Xray Generate Violations Report
+
+Next, you can use that action to create a flow such as this example, **“For Each”** Violation Record where the severity is medium, take an action:
+
+**Action** JFrog Artifactory Set Item Properties
+
+Next, you can use that action to create a flow such as this example, **“For Each”** Violation Record where the severity is low, take an action:
+
+**Action** JFrog Xray Create Ignore Rules
+
+Now you can save your flow! You will need to activate the flow before the Xray violations will work in the flow.
+
 ## Next: Watch the Video
 
-[To watch a video of these examples and learn more, click here.](#)
+[To watch a video of these examples and learn more, click here.](https://youtu.be/pPcUVXn1Ds0)
 
 ## List of Supported Actions
 
-Name | Description
------------- | -------------
-Example | Example Description
-Example | Example Description
-Example | Example Description
+Name | 
+------------ | 
+Create Violation Record
+Set Item Properties
+Set Update Properties
+Set Delete Properties
+Create User
+Update User
+Delete User
+Get Users
+Get User Details
+Scan Artifact
+Artifact Summary
+Create Ignore Rules
+Delete Ignore Rules
+Generate Violations Report
+Export Violations Report
+Create or Replace Permission Target | 
+Delete Permission Target | 
+Get Permission Target Details | 
+Get Permission Targets
+Trigger Scan Build
+Scan Build Results
 
 ## Requirements:
 
