@@ -8,7 +8,7 @@ Focused on Xray-related actions: from generation violations reports to creating 
 
 ServiceNow Spokes are applications with predefined actions that customers can use to build workflows on the NOW Platform. The JFrog Spoke has actions that can be combined with other native Spokes from ServiceNow and other third-party tools to create enterprise-grade workflows for vulnerability and change management for all your ITSM needs.
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/ms-2.png" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/im-1.png" width="800">
 
 ## Major Features Include:
 
@@ -29,7 +29,7 @@ If you need help with this integration, please contact `partner-support@jfrog.co
 
 ## Example 1: Build Your First Xray Flow
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/img3.png" width="400">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/img3.png" width="400">
 
 First, to start use the JFrog Xray Spoke, you must be an Admin of your JFrog Platform Instance so you can create the initial webhook needed for Xray. 
 
@@ -41,13 +41,13 @@ Create a New Flow.
 
 Next, for the Trigger > select **REST API - Asynchronous**
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/i1.png" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/i1.png" width="800">
 
 The ServiceNow + Path is the full webhook URL that needs to be added to Xray.
 
 Once that is done, Xray should be setup to send violation data to ServiceNow. For ServiceNow to be able to read these violation records we need to define the complex object of the response body as follows: 
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/ServiceNow/Jfrog Spoke/images/i2.png" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/i2.png" width="800">
 
 This will allow ServiceNow to read the incoming application json. 
 
