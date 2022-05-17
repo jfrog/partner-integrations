@@ -4,6 +4,10 @@ The JFrog Xray Spoke allows your organization to build automated workflows that 
 
 Focused on Xray-related actions: from generation violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Xray Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations. 
 
+# Support
+
+If you need help with this integration, please contact `partner-support@jfrog.com`
+
 # How It Works
 
 ServiceNow Spokes are applications with predefined actions that customers can use to build workflows on the NOW Platform. The JFrog Spoke has actions that can be combined with other native Spokes from ServiceNow and other third-party tools to create enterprise-grade workflows for vulnerability and change management for all your ITSM needs.
@@ -21,11 +25,96 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 * Trigger Scans of new Artifacts and Builds
 * Manage Custom Item Properties
 
-# Support
+# Getting Started 
 
-If you need help with this integration, please contact `partner-support@jfrog.com`
+Before you begin building a workflow using the JFrog Xray Spoke in Servicenow, you will need to create a policy and watch in JFrog Xray. To start your journey with JFrog Xray, you can [watch this video here.](https://www.youtube.com/watch?v=88hwwMJsS58)
 
-# Getting Started
+Setup JFrog Xray Spoke with Connection Alias
+ 
+Most of our actions use the JFrog REST API. In order to use it, users must add their credential to the appropriate connection alias: “JFrog Platform Admin” or ID “x_jfro_xray_spoke.JFrog_Platform_Admin”. 
+
+The authentication method uses a bearer token generated from the JFrog platform. To generate a token, go to your profile on the JFrog Platform in the top right hand corner and select “edit profile.” You should see this screen: 
+
+Click that “Generate an Identity Token” button after unlocking this page by entering your password. We will use this identity token to create an API credential and connect it to the aforementioned connection alias. (Do not use the Generate API Key option)
+
+Next: Go to ServiceNow
+
+To connect these credentials in ServiceNow navigate to the Credentials Tab.
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m1.png" width="800">
+
+Create a new API Key Credentials
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m2.png" width="800">
+
+Enter Identity Token from JFrog Platform as the API Key here:
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m3.png" width="800">
+
+Next you go to Connections and Credentials Aliases, and enter the JFrog Platform Admin Connection and Credential Alias.
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m4.png" width="800">
+
+In the connections tab near the bottom area, hit the New button
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m5.png" width="800">
+
+Then you provide the name of the alias and in the Credential input (hit the search button) and it will allow you to select the newly created credential 
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m6.png" width="800">
+
+Enter your JPD base url in the Connection URL box:
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m7.png" width="800">
+
+To save the credential alias, please hit Submit at the bottom.
+
+Go to Flow Designer and connect Xray
+Next, you need to setup your webhook from ServiceNow. 
+
+Go to https://jfrogshare.service-now.com/
+Login using credentials
+
+Go to Flow Designer
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m10.png" width="800">
+
+Select New to create a new flow and name it.
+
+Once you are in your flow, select a Trigger
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m11.png" width="800">
+
+Under Trigger, select REST API for Flows in ServiceNow
+Most Xray flows will be triggered using a REST API post step. Creating this step will automatically generate a webhook that needs to be added to Xray as mentioned above in the section. Example: 
+
+
+
+
+The Path can be used when you create the webhook in the JFrog Platform. 
+
+In the JFrog Platform, Xray webhooks can be found under Administration > Xray > Settings
+
+Click on New Webhook in the top right hand corner
+
+The ServiceNow + Path is the full webhook URL that needs to be added to Xray. 
+
+You add the URL from the Spoke Path to the URL area in the webhook:
+
+
+
+Then you want to make sure to connect your webhook to the policy in JFrog Xray by going to Administration > Xray > Watches & Policies and click on the policy you want to add this webhook to. 
+
+Go to the rules for the policy and select trigger webhook and choose the webhook with the name you provided.
+
+
+
+Once that is done, Xray should be setup to send violation data to ServiceNow. 
+
+This will allow ServiceNow to read the incoming application json. 
+
+To see an example of building a workflow, [watch this video here](https://www.youtube.com/watch?v=pPcUVXn1Ds0)
+
 
 ## Example 1: Build Your First Xray Flow
 
