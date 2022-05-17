@@ -10,6 +10,7 @@ Documentation and/or links to JFrog Partner integrations can be found this in re
      * [PagerDuty Xray Security Incidents](PagerDuty/Xray/SecurityIncidents/README.md)
      * [PagerDuty Pipelines Build Notifications](PagerDuty/Pipelines/BuildNotifications/README.md)
      * [Slack Platform App](Slack/Platform/README.md)
+     * [ServiceNow Spoke](https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/README.md)
    * [Contributing](#contributing)
    * [Versioning](#versioning)
    * [Contact](#contact)
