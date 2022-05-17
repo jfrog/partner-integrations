@@ -110,7 +110,7 @@ Then you want to make sure to connect your webhook to the policy in JFrog Xray b
 
 Go to the rules for the policy and select trigger webhook and choose the webhook with the name you provided.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s2.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s22.png?raw=true" width="800">
 
 Once that is done, Xray should be setup to send violation data to ServiceNow. 
 
