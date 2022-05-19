@@ -27,6 +27,15 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 
 # Getting Started 
 
+## Prerequisite: Required ServiceNow Dependencies
+
+Before the spoke is installed, you will need to install the following plugins for the workflow to completely work. 
+**The required plugins are:**
+* ServiceNow IntegrationHub Starter Pack Installer
+* REST API Builder Backend
+
+## JFrog Platform Steps:
+
 Before you begin building a workflow using the JFrog Xray Spoke in Servicenow, you will need to create a policy and watch in JFrog Xray. To start your journey with JFrog Xray, you can [watch this video here.](https://www.youtube.com/watch?v=88hwwMJsS58)
 
 Setup JFrog Xray Spoke with Connection Alias
@@ -39,7 +48,7 @@ The authentication method uses a bearer token generated from the JFrog platform.
 
 Click that “Generate an Identity Token” button after unlocking this page by entering your password. We will use this identity token to create an API credential and connect it to the aforementioned connection alias. (Do not use the Generate API Key option)
 
-Next: Go to ServiceNow
+## Next: Go to ServiceNow
 
 To connect these credentials in ServiceNow navigate to the Credentials Tab.
 
