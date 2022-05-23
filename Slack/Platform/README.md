@@ -38,7 +38,7 @@ Then click on **Next, Generate your ID and Secret.**.
 
 B) If you are using the free version of the JFrog Platform, go to the **Administration** section and then click on **Security**. Next, scroll down and click on **Integrations**.
 
-Then click on **+ New Client Integration**. Provide it a name and then from the dropdown under Application, select Slack.
+Then click on **+ New Client Integration**. Provide it a name and then from the dropdown under Application, select **JFrog Collaboration Integration**.
 
 Then click on **Next, Generate your ID and Secret.**.
 
