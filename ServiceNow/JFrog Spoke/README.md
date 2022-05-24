@@ -4,6 +4,8 @@ The JFrog Xray Spoke allows your organization to build automated workflows that 
 
 Focused on Xray-related actions: from generation violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Xray Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations. 
 
+[To see a video of this example, click here.](https://youtu.be/pPcUVXn1Ds0)
+
 # Support
 
 If you need help with this integration, please contact `partner-support@jfrog.com`
@@ -36,9 +38,9 @@ Before the spoke is installed, you will need to install the following plugins fo
 
 ## JFrog Platform Steps:
 
-Before you begin building a workflow using the JFrog Xray Spoke in Servicenow, you will need to create a policy and watch in JFrog Xray. To start your journey with JFrog Xray, you can [watch this video here.](https://www.youtube.com/watch?v=88hwwMJsS58)
+Before you begin building a workflow using the JFrog Xray Spoke in Servicenow, you will need to do some initial setup. To start, you can [watch this installation video here](https://youtu.be/yVUG4MqmGDg) and then follow along with the documentation below.
 
-Setup JFrog Xray Spoke with Connection Alias
+**Setup JFrog Xray Spoke with Connection Alias**
  
 Most of our actions use the JFrog REST API. In order to use it, users must add their credential to the appropriate connection alias: “JFrog Platform Admin” or ID “x_jfro_xray_spoke.JFrog_Platform_Admin”. 
 
@@ -125,8 +127,9 @@ Once that is done, Xray should be setup to send violation data to ServiceNow.
 
 This will allow ServiceNow to read the incoming application json. 
 
-To see an example of building a workflow, [watch this video here](https://www.youtube.com/watch?v=pPcUVXn1Ds0)
+## Watch the Spoke Video
 
+To see an example of building a workflow, [watch this video here](https://www.youtube.com/watch?v=pPcUVXn1Ds0) and then you can follow the steps below.
 
 ## Example 1: Build Your First Xray Flow
 
@@ -171,10 +174,6 @@ Next, you can use that action to create a flow such as this example, **“For Ea
 **Action** JFrog Xray Create Ignore Rules
 
 Now you can save your flow! You will need to activate the flow before the Xray violations will work in the flow.
-
-## Next: Watch the Video
-
-[To watch a video of these examples and learn more, click here.](https://youtu.be/pPcUVXn1Ds0)
 
 ## List of Supported Actions
 
