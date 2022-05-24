@@ -129,7 +129,7 @@ This will allow ServiceNow to read the incoming application json.
 
 ## Watch the Spoke Video
 
-To see an example of building a workflow, [watch this video here](https://www.youtube.com/watch?v=pPcUVXn1Ds0) and then you can follow the steps below.
+To see an example of building a workflow just [watch this video here](https://youtu.be/q7MOf_r0s9Y) and then you can follow the steps below.
 
 ## Example 1: Build Your First Xray Flow
 
