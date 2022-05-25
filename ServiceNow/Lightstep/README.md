@@ -23,7 +23,7 @@ Select Integrations from the Lightstep console’s navigation pane.
 Click the JFrog Xray integrations card
 Fill out the details in the form to enable the integration.
   
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/Lightstep/images/image23.png?raw=true" width="800">
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/Lightstep/images/image3.png?raw=true" width="800">
 
 You’ll then need to [create a webhook endpoint in Lightstep](https://lightstep.com/incident-response/docs/jfrog-xray-create-webhook) for JFrog Xray to send automated real-time messages and information to Lightstep Incident Response. When you click Generate Webook, Lightstep will create a webhook URL for the secure endpoint. 
 You can then use this webhook URL to [configure the webhook in JFrog Xray](https://lightstep.com/incident-response/docs/jfrog-xray-configure-webhook). 
