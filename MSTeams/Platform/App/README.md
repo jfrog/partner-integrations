@@ -9,6 +9,18 @@ With the JFrog app for Teams, developers can better collaborate on delivering qu
 
 **[Watch this video](https://youtu.be/nAuL8NruiNk) to see what it looks like to create your first notification.**
 
+# Contact Support
+
+If you need help with this MSTeams integration, please contact `partner_support@jfrog.com`. If you need general JFrog support, you can [reach out to us on the contact form here](https://jfrog.com/contact-us/).
+
+# Terms and Conditions
+
+You can [read our terms and conditions here](https://jfrog.com/eula/).
+
+# Privacy Policy
+
+You can [read our privacy policy here](https://jfrog.com/privacy-policy/).
+
 # How it Works
 
 * This integration allows you the ability to see Artifact, Artifact Properties, Docker, Release Bundle, Distribution and Build events through notifications and actionable cards inside the Microsoft Teams browser.  
@@ -26,10 +38,6 @@ With the JFrog app for Teams, developers can better collaborate on delivering qu
 * You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. 
 
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
-
-# Support
-
-If you need help with this integration, please contact `partner_support@jfrog.com`
 
 # Types of Supported Notifications
 
