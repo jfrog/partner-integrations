@@ -171,7 +171,7 @@ If you navigate back to the Microsoft Teams, you will see this information in th
 
 **NOTE**: It can take up to 2-4 minutes to receive all notifications.
 
-# How to Sign Out and Uninstall
+# How to Sign Out
 
 To sign out of the application, click on **Help** or type /jfrog help
 
@@ -179,7 +179,13 @@ A message will show up with a button that allows you to **Sign Out** of the JFro
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/ms-out.png" width="500">
 
-Please note that signing out does not disconfigure the JFrog Platform from the JFrog Bot in Microsoft Teams. To disable the connection between your JFrog Platform instance and the JFrog bot in Microsoft Teams, you can use the **Disconnect JFrog Platform** button.
+Please note that signing out does not disconfigure the JFrog Platform from the JFrog Bot in Microsoft Teams. 
+
+# Disconnect JFrog Platform Deployment
+
+To disable the connection between your JFrog Platform instance and the JFrog bot in Microsoft Teams, you can use the **Disconnect JFrog Platform** button found on the menu.
+
+# Uninstall
 
 To completely uninstall application, [follow the instructions here](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d)
 
