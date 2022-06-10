@@ -11,7 +11,7 @@ With the JFrog app for Teams, developers can better collaborate on delivering qu
 
 # Contact Support
 
-If you need help with this MSTeams integration, please contact `partner_support@jfrog.com`. If you need general JFrog support, you can [reach out to us on the contact form here](https://jfrog.com/contact-us/).
+If you need help with this Microsoft Teams integration, please contact `partner-support@jfrog.com`. If you need general JFrog support, you can [reach out to us on the contact form here](https://jfrog.com/contact-us/).
 
 # Terms and Conditions
 
