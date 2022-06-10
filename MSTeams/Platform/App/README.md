@@ -39,6 +39,19 @@ You can [read our privacy policy here](https://jfrog.com/privacy-policy/).
 
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
+# Support Commands
+
+To use the commands in Microsoft Teams, start by typing **@jfrog** and hit enter. Next, click on **Select or type a command** and you should see the following commands:
+
+command | description
+------------ | -------------
+menu | Show available options
+help | Get help and support
+connect | Connect JFrog Platform
+disconnect | Disconnect JFrog Platform
+login | Sign in user to app
+logout | Sign out user to app
+
 # Types of Supported Notifications
 
 All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
