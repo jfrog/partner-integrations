@@ -142,8 +142,10 @@ Next, there will be a window that asks you to **Sign In**. Login to the JFrog Pl
 
 ## Create an Artifactory Notification
 
-Once you see the confirmation message, you can create new notifications and add them to your Microsoft Teams channel.
+Next, you’ll see a Get Started button, click on that to bring up the main menu of items. 
  
+Once you see the menu, you can create new notifications and add them to your Microsoft Teams channel*. You can also type @jfrog and select the menu option in the text to bring up the menu.
+
 *We expect you to have your channels already setup - how you want to organize notifications to various teams and channels is up to your organization.
  
 Click on **Create Notification**. 
