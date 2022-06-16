@@ -151,7 +151,7 @@ Once you see the menu, you can create new notifications and add them to your Mic
  
 Click on **Create Notification**. 
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/ms-7.png" width="500">
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/n1.png" width="500">
 
 From the window that appears, use the drop-down to select the notification type you want to create. In this example, we’ll select **Artifact Properties**. 
 
@@ -193,13 +193,15 @@ To sign out of the application, click on **Help** or type /jfrog help
 
 A message will show up with a button that allows you to **Sign Out** of the JFrog Bot. 
 
-<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/ms-out.png" width="500">
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/n3.png" width="500">
 
 Please note that signing out does not disconfigure the JFrog Platform from the JFrog Bot in Microsoft Teams. 
 
 # Disconnect JFrog Platform Deployment
 
 To disable the connection between your JFrog Platform instance and the JFrog bot in Microsoft Teams, you can use the **Disconnect JFrog Platform** button found on the menu.
+
+<img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/n4.png" width="500">
 
 # Uninstall
 
