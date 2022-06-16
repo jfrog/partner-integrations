@@ -81,7 +81,8 @@ In the Micrsoft Teams chat area, typing in **@jfrog** followed by one of these c
 
 Type | Action
 ------------ | -------------
-help | This will show the menu of available options on the app
+menu | This will show the menu of available options on the app
+help | This will show you how to get help and support
 connect | This will provide the ability to connect to the JPD
 disconnect | This will let you disconnect from the JPD 
 login | Sign in user to JPD
