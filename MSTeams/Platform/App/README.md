@@ -139,7 +139,9 @@ Last, copy and paste your JFrog Platform URL (found at the top of your browser w
 
 Hit Save and look for the success message! Great, you have now connected your organization’s JFrog account to the Microsoft Teams app.
 
-Next, there will be a window that asks you to **Sign In**. Login to the JFrog Platform with your credentials and **Allow** the Microsoft Teams JFrog application to authenticate to the JFrog Platform.
+Next, there will be a window that asks you to Get Started. Click on **Get Started** and on the next screen: **Sign In**. Use the username and password provided to you by JFrog.
+
+Login to the JFrog Platform with your credentials and **Allow** the Microsoft Teams JFrog application to authenticate to the JFrog Platform.
 
 ## Create an Artifactory Notification
 
