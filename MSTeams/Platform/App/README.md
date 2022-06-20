@@ -1,9 +1,9 @@
 
 # Microsoft Teams 
 
-This integration is between the JFrog Platform and Microsoft Teams that focuses on notifications from the JFrog Platform.
+This integration is between the JFrog Platform and Microsoft Teams that focuses on notifications from the JFrog Platform. If you do not already have a JFrog account, you can [get the free tier here](https://jfrog.com/start-free/#saas).
 
-We know that software development happens in a myriad of tools and collaboration environments. As your mission-critical tools for DevOps, the results of many key events that occur in Artifactory and Xray reveal whether or not your software pipeline is on-track to deliver production-quality releases. The JFrog app for Microsoft Teams brings real-time visibility and awareness of what’s happening in your JFrog-powered software pipelines to your entire team through one of the most widely used collaboration tools. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event.
+We know that software development happens in a myriad of tools and collaboration environments. As your mission-critical tools for DevOps, the results of many key events that occur in Artifactory and Xray reveal whether or not your software pipeline is on-track to deliver production-quality releases. The JFrog app for Microsoft Teams brings real-time visibility and awareness of what’s happening in your JFrog-powered software pipelines to your entire team through one of the most widely used collaboration tools. When it comes to people across the organization knowing what’s going on, there aren’t great solutions. This will give each user situational awareness about occurrences in the JFrog Platform.  Additionally, where appropriate - they will have easy links and action buttons to go follow-up on the event. 
 
 With the JFrog app for Teams, developers can better collaborate on delivering quality releases, responding in real-time to DevOps events as they occur.
 
