@@ -41,7 +41,7 @@ You can [read our privacy policy here](https://jfrog.com/privacy-policy/).
 
 * You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. 
 
-* Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
+* Your organization must already have setup policies and watches prior to getting Xray notifications in MSTeams. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
 # Support Commands
 
