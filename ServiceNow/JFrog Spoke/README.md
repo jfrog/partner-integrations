@@ -209,7 +209,7 @@ Then in the Connection URL for the Credential Alias, include the network port in
 
 # Requirements:
 
-* Your organization should have a cloud instance of the JFrog Platform version 7.27 or above. You can signup for a free cloud instance at: https://jfrog.com/start-free/
+* Your organization should have an instance of the JFrog Platform version 7.27 or above. You can signup for a free instance at: https://jfrog.com/start-free/
 
 * You must be a user with Admin permissions to create the initial webhooks for Artifactory and Xray.
 
