@@ -185,12 +185,9 @@ Then when configuring the JPD, include the network port in the JPD url, e.g. `ht
 
 # Requirements
 
-* Your organization has a cloud instance of Artifactory. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
-
+* Your organization has an instance of Artifactory. You can signup for a free instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
 * You must be a user with Admin permissions to authenticate your organization’s Slack app with your JFrog Platform Deployment (JPD).
-
 * You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. Once created, any team member can add existing notifications to new Slack channels.
-
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
 You can also click here for a list of [FAQ's](https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/faq.md).
