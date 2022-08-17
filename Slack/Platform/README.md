@@ -1,6 +1,6 @@
 # Welcome to the JFrog Slack App
 
-This integration is between JFrog Artifactory and Xray and Slack. 
+This integration is between JFrog Artifactory and Xray and Slack.
 
 We know that software development happens in a myriad of collaboration environments. Today, there are key events throughout the JFrog Platform that can be difficult for a user to interact with if they aren't logged into the platform. When it comes to people across the organization knowing what’s going on, this Slack integration provides users real-time information about Artifactory and Xray events. This will give each user situational awareness about occurrences in the JFrog Platform. Additionally, where appropriate - they will have links and action buttons to follow-up on the event.
 
@@ -68,7 +68,7 @@ Select which type notification you would like to create from the drop-down menu.
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image2.png?raw=true" width="600">
 
-On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included. 
+On the next screen, name the notification and select which events you would like to include in the notification, and which repos should be included.
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image8n.png?raw=true" width="600">
 
@@ -80,7 +80,7 @@ On the next screen, you may see options for your notification. For example, for 
 
 Once you hit **Next**, you should see a success message.
 
-Once you have setup notifications, you should start seeing the notification cards in the channel within about 20 minutes. If you do not see notifications working, first type **/jfrog rt list** to bring up the list of active notifications. 
+Once you have setup notifications, you should start seeing the notification cards in the channel within about 20 minutes. If you do not see notifications working, first type **/jfrog rt list** to bring up the list of active notifications.
 
 If you see nothing on the notification list, please try again or contact support.
 
@@ -109,9 +109,9 @@ License Compliance | *This sends individual notification cards for each license 
 
 # Xray Notifications
 
-JFrog Xray notifications are special in that only repositories that are being actively watched in Xray and have a policy setup will generate notification events. To learn more about how Xray policies and watch work, [click here](https://www.youtube.com/watch?v=88hwwMJsS58). 
+JFrog Xray notifications are special in that only repositories that are being actively watched in Xray and have a policy setup will generate notification events. To learn more about how Xray policies and watch work, [click here](https://www.youtube.com/watch?v=88hwwMJsS58).
 
-If you already have policies and watches setup in Xray, you can create notifications in the Slack app. 
+If you already have policies and watches setup in Xray, you can create notifications in the Slack app.
 
 Hit Create Notification.
 
@@ -133,7 +133,7 @@ All notifications can be paused, which removes them from being active in Slack c
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/images/image3.png?raw=true" width="600">
 
-The delete notification button deletes the entire notification from Slack as well as the underlying webhook in the JFrog Platform. 
+The delete notification button deletes the entire notification from Slack as well as the underlying webhook in the JFrog Platform.
 
 # List of Shortcuts
 
@@ -177,14 +177,17 @@ Outside the UI elements, you can also interact with our application using comman
 
 */jfrog xr policy list* - Provides a list of current policies with a micro action to open JFrog Platform.
 
-# Requirements 
+# On-premise JFrog Installation
 
-* Your organization has a cloud instance of Artifactory. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
+To use the Slack integration with an on-premise JFrog installation, the network port `8082` will need to be exposed to the external network. See [JFrog System Requirements](https://www.jfrog.com/confluence/display/JFROG/System+Requirements#SystemRequirements-RequirementsMatrix) for more information.
 
+Then when configuring the JPD, include the network port in the JPD url, e.g. `https://example.com:8082`
+
+# Requirements
+
+* Your organization has an instance of Artifactory. You can signup for a free instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
 * You must be a user with Admin permissions to authenticate your organization’s Slack app with your JFrog Platform Deployment (JPD).
-
 * You must be a user with Admin permissions to create the initial notifications for Artifactory and Xray. Once created, any team member can add existing notifications to new Slack channels.
-
 * Your organization must already have setup policies and watches prior to getting Xray notifications in Slack. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
 You can also click here for a list of [FAQ's](https://github.com/jfrog/partner-integrations/blob/main/Slack/Platform/faq.md).
