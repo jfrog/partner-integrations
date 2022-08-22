@@ -84,6 +84,12 @@ Once you have setup notifications, you should start seeing the notification card
 
 If you see nothing on the notification list, please try again or contact support.
 
+# Notifications to private channel
+
+The Slack app supports sending notifications to private channel. Select the private channel during the create new notification process and notifications will be routed to that channel.
+
+**Important:** In order to send notifications to private channel, the Slack app **must** be added to the private channel separately. You can do this by going into the channel's info modal, then select "Integrations" tab. Click on "Add an App" button and add "JFrog Artifactory and Xray" app. This needs to be done on *each and every* private channels you wish the Slack app sends notifications to.
+
 # Types of Supported Notifications
 
 All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
