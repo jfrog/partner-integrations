@@ -90,6 +90,14 @@ The Slack app supports sending notifications to private channel. Select the priv
 
 **Important:** In order to send notifications to private channel, the Slack app **must** be added to the private channel separately. You can do this by going into the channel's info modal, then select "Integrations" tab. Click on "Add an App" button and add "JFrog Artifactory and Xray" app. This needs to be done on *each and every* private channels you wish the Slack app sends notifications to.
 
+# Notifications to individuals
+
+The Slack app supports sending notifications to individuals. Select the direct message channel or multi-person direct message channel during the create new notification process and notifications will be routed to that chat.
+
+**Important:** In order to send notifications to multiple individuals, the Slack app **must** be added to the chat separately. You can do this by creating a group conversation between the Slack app and the individuals. This needs to be done on *each and every* multi-person direct message channel you wish the Slack app sends notifications to.
+
+If you want the Slack app's bot user to start a 1:1 conversation with you in the workspace, start by creating a conversation between the Slack app and yourself. Resultant messages will start appearing in the "Messages" tab of the Slack App.
+
 # Types of Supported Notifications
 
 All notifications are based on webhook events in the JFrog Platform. The currently supported notifications include:
