@@ -33,6 +33,12 @@ You can [read our privacy policy here](https://jfrog.com/privacy-policy/).
 
 <img src="https://raw.githubusercontent.com/jfrog/partner-integrations/main/MSTeams/Platform/App/images/ms-1.png" width="800">
 
+# On-premise JFrog Installation
+
+To use the Microsoft Teams integration with an on-premise JFrog installation, the network port `8082` will need to be exposed to the external network. See [JFrog System Requirements](https://www.jfrog.com/confluence/display/JFROG/System+Requirements#SystemRequirements-RequirementsMatrix) for more information.
+
+Then when configuring the JPD, include the network port in the JPD url, e.g. `https://example.com:8082`
+
 # Requirements 
 
 * Your organization should have a cloud instance of the JFrog Platform version 7.27 or above. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
