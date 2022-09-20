@@ -41,7 +41,7 @@ Then when configuring the JPD, include the network port in the JPD url, e.g. `ht
 
 # Requirements 
 
-* Your organization should have a cloud instance of the JFrog Platform version 7.27 or above. You can signup for a free cloud instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
+* Your organization should have an instance of the JFrog Platform version 7.27 or above. You can signup for a free instance at: [https://jfrog.com/start-free/](https://jfrog.com/start-free/)
 
 * You must be a user with Admin permissions to authenticate your organization’s app with your JFrog Platform Deployment (JPD).
 
