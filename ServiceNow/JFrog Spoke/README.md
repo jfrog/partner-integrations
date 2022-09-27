@@ -30,7 +30,7 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 * Create, Update, and Delete Watches
 * Create, Update and Delete Policies
 * Manage Group Permissions
-* Injest Xray data into Servicenow Tables
+* Ingest Xray data into ServiceNow Tables
 
 # Getting Started
 
@@ -166,33 +166,57 @@ Next, you can use that action to create a flow such as this example, **“For Ea
 **Action** JFrog Xray Create Ignore Rules
 
 Now you can save your flow! You will need to activate the flow before the flow does anything.
-The flow will start working as expected after a violation is sent to Servicenow after the flow is activated.
+The flow will start working as expected after a violation is sent to ServiceNow after the flow is activated.
 
 # List of Supported Actions
 
 Name |
 ------------ |
-Create Violation Record
-Set Item Properties
-Set Update Properties
-Set Delete Properties
-Create User
-Update User
-Delete User
-Get Users
-Get User Details
-Scan Artifact
-Artifact Summary
-Create Ignore Rules
-Delete Ignore Rules
-Generate Violations Report
-Export Violations Report
-Create or Replace Permission Target
-Delete Permission Target
-Get Permission Target Details
-Get Permission Targets
-Trigger Scan Build
-Scan Build Results
+JFrog Create User
+JFrog Update User
+JFrog Delete User
+JFrog Get User
+JFrog Get Users
+JFrog Get User Details
+JFrog Create or Replace Permission Target
+JFrog Delete Permission Target
+JFrog Get Permission Targets
+JFrog Get Permission Target Details
+JFrog Artifactory Update Group
+JFrog Artifactory Get Groups
+JFrog Artifactory Get Group Details
+JFrog Artifactory Create or Replace Group
+JFrog Artifactory Set Item Properties
+JFrog Artifactory Update Item Properties
+JFrog Artifactory Delete Item Properties
+JFrog Artifactory Move Item
+JFrog Artifactory Copy Item
+JFrog Artifactory Delete Item
+JFrog Artifactory Get Repos
+JFrog Artifactory Delete Repository
+JFrog Artifactory Create Repository
+JFrog Xray Generate Violations Report
+JFrog Xray Export Violations Report
+JFrog Xray Generate Violations Report (Advanced)
+JFrog Xray Scan Artifact
+Jfrog Xray Trigger Scan Build
+Jfrog Xray Scan Build Results
+JFrog Xray Artifact Summary
+JFrog Xray Create Ignore Rules
+JFrog Xray Delete Ignore Rule
+JFrog Xray Delete Watch
+JFrog Xray Delete Policy
+JFrog Xray Update Policy
+JFrog Xray Create Security (min severity) Policy
+JFrog Xray Create Security (CVSS range) Policy
+JFrog Xray Create License (allowed) Policy
+JFrog Xray Create License (banned) Policy
+JFrog Xray Create Operational Risk (min risk) Policy
+JFrog Xray Create Operational Risk (custom criteria) Policy
+JFrog Xray Create Watch
+JFrog Xray Update Watch
+JFrog Xray Get Watch
+JFrog Xray Get Policy
 
 # On-premise JFrog Installation
 
