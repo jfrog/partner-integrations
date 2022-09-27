@@ -1,8 +1,8 @@
 # Welcome to the JFrog Spoke Documentation
 
-The JFrog Xray Spoke allows your organization to build automated workflows that interact directly with the JFrog Platform.
+The JFrog Spoke allows your organization to build automated workflows that interact directly with the JFrog Platform.
 
-Focused on Xray-related actions: from generation violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Xray Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations.
+Focused on Xray-related actions: from generation violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations.
 
 [To see a video of this example, click here.](https://youtu.be/pPcUVXn1Ds0)
 
@@ -26,6 +26,11 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 * Generate and Send Xray Violations Reports
 * Trigger Scans of new Artifacts and Builds
 * Manage Custom Item Properties
+* Move, Copy and Delete Artifacts
+* Create, Update, and Delete Watches
+* Create, Update and Delete Policies
+* Manage Group Permissions
+* Ingest Xray data into ServiceNow Tables
 
 # Getting Started
 
@@ -38,9 +43,9 @@ Before the spoke is installed, you will need to install the following plugins fo
 
 ## JFrog Platform Steps:
 
-Before you begin building a workflow using the JFrog Xray Spoke in ServiceNow, you will need to do some initial setup. To start, you can [watch this installation video here](https://youtu.be/yVUG4MqmGDg) and then follow along with the documentation below.
+Before you begin building a workflow using the JFrog Spoke in ServiceNow, you will need to do some initial setup. To start, you can [watch this installation video here](https://youtu.be/yVUG4MqmGDg) and then follow along with the documentation below.
 
-**Setup JFrog Xray Spoke with Connection Alias**
+**Setup JFrog Spoke with Connection Alias**
 
 Most of our actions use the JFrog REST API. In order to use it, users must add their credential to the appropriate connection alias: “JFrog Platform Admin” or ID “x_jfro_xray_spoke.JFrog_Platform_Admin”.
 
@@ -90,32 +95,27 @@ Go to your ServiceNow instance. For example: https://jfrogshare.service-now.com/
 
 Login using your credentials.
 
-Next, Go to Flow Designer:
+Most Xray flows will be triggered using Xray's ability to send data to a webhook.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m9.png?raw=true" width="800">
-Select New to create a new flow and name it.
+The url/api endpoint you will need to use is:
 
-Once you are in your flow, select a Trigger
+**https://<service-now-url>/api/x_jfro_xray_spoke/xray**
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m10.png?raw=true" width="800">
-
-Under Trigger, select REST API for Flows in ServiceNow
-
-Most Xray flows will be triggered using a REST API post step. Creating this step will automatically generate a webhook that needs to be added to Xray as mentioned above in the section. Example:
-
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m11.png?raw=true" width="800">
-
-The Path can be used when you create the webhook in the JFrog Platform.
+The url above can be used when you create the webhook in the JFrog Platform.
 
 In the JFrog Platform, Xray webhooks can be found under Administration > Xray > Settings
 
 Click on New Webhook in the top right hand corner
 
-The ServiceNow + Path is the full webhook URL that needs to be added to Xray.
-
-You add the URL from the Spoke Path to the URL area in the webhook:
+You add the URL provided above to the URL area in the webhook:
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s1.png?raw=true" width="800">
+
+In order to authenticate with ServiceNow you will need to create a service account that has "Web service access only" enabled:
+
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/ServiceAccount.png?raw=true" width="800">
+
+Enter the service account's credentials in the basic auth section on the webhook creation page in Xray.
 
 Then you want to make sure to connect your webhook to the policy in JFrog Xray by going to Administration > Xray > Watches & Policies and click on the policy you want to add this webhook to.
 
@@ -125,17 +125,17 @@ Go to the rules for the policy and select trigger webhook and choose the webhook
 
 Once that is done, Xray should be setup to send violation data to ServiceNow.
 
-This will allow ServiceNow to read the incoming application json.
-
-## Watch the Spoke Video
-
-To see an example of building a workflow just [watch this video here](https://youtu.be/q7MOf_r0s9Y) and then you can follow the steps below.
+This will allow ServiceNow to read the incoming application json. It will store this data in four tables that can be accessed from the spoke called:
+* Violations
+* Issues
+* Impacted Artifacts
+* Infected Files
 
 ## Example 1: Build Your First Xray Flow
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/img3.png?raw=true" width="400">
 
-First, to start use the JFrog Xray Spoke, you must be an Admin of your JFrog Platform Instance so you can create the initial webhook needed for Xray.
+First, to start use the JFrog Spoke, you must be an Admin of your JFrog Platform Instance so you can create the initial webhook needed for Xray.
 
 If you do not already have an Xray Watch and Policy created, this will be required to setup violations. [Learn how to setup watches and policies in Xray](https://www.youtube.com/watch?v=88hwwMJsS58).
 
@@ -143,25 +143,17 @@ Next, in your organization's ServiceNow instance, go to **Integration Hub** > **
 
 Create a New Flow.
 
-Next, for the Trigger > select **REST API - Asynchronous**
+Next, for the Trigger > select **Created**
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/i1.png?raw=true" width="800">
+Select the table **Impacted Artifacts**:
 
-The ServiceNow + Path is the full webhook URL that needs to be added to Xray.
+<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/Trigger.png?raw=true" width="800">
 
-Once that is done, Xray should be setup to send violation data to ServiceNow. For ServiceNow to be able to read these violation records we need to define the complex object of the response body as follows:
+Once that is done, the flow should be able to interact with data that is being sent to ServiceNow through the URL mentioned above.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/i2.png?raw=true" width="800">
+Now we can do some cool things with this data using the actions in the JFrog Spoke.
 
-This will allow ServiceNow to read the incoming application json.
-
-This will then bring in the Xray violations payload data into ServiceNow so we can parse it and use the information to build out our flows.
-
-Next, select **Actions**
-
-Then, search for **JFrog Create Violation Record**. This will load up the Xray violation data (via webhook in the JFrog Platform) and make it available to all the Spoke actions.
-
-Next, you can use that action to create a flow such as this example, **“For Each”** Violation Record where the severity is high, take an action:
+Next, select **Actions** to create a flow such as this example, **“For Each”** Impacted Artifact where the severity is high, take an action:
 
 **Action**: JFrog Xray Generate Violations Report
 
@@ -173,33 +165,58 @@ Next, you can use that action to create a flow such as this example, **“For Ea
 
 **Action** JFrog Xray Create Ignore Rules
 
-Now you can save your flow! You will need to activate the flow before the Xray violations will work in the flow.
+Now you can save your flow! You will need to activate the flow before the flow does anything.
+The flow will start working as expected after a violation is sent to ServiceNow after the flow is activated.
 
 # List of Supported Actions
 
 Name |
 ------------ |
-Create Violation Record
-Set Item Properties
-Set Update Properties
-Set Delete Properties
-Create User
-Update User
-Delete User
-Get Users
-Get User Details
-Scan Artifact
-Artifact Summary
-Create Ignore Rules
-Delete Ignore Rules
-Generate Violations Report
-Export Violations Report
-Create or Replace Permission Target
-Delete Permission Target
-Get Permission Target Details
-Get Permission Targets
-Trigger Scan Build
-Scan Build Results
+JFrog Create User
+JFrog Update User
+JFrog Delete User
+JFrog Get User
+JFrog Get Users
+JFrog Get User Details
+JFrog Create or Replace Permission Target
+JFrog Delete Permission Target
+JFrog Get Permission Targets
+JFrog Get Permission Target Details
+JFrog Artifactory Update Group
+JFrog Artifactory Get Groups
+JFrog Artifactory Get Group Details
+JFrog Artifactory Create or Replace Group
+JFrog Artifactory Set Item Properties
+JFrog Artifactory Update Item Properties
+JFrog Artifactory Delete Item Properties
+JFrog Artifactory Move Item
+JFrog Artifactory Copy Item
+JFrog Artifactory Delete Item
+JFrog Artifactory Get Repos
+JFrog Artifactory Delete Repository
+JFrog Artifactory Create Repository
+JFrog Xray Generate Violations Report
+JFrog Xray Export Violations Report
+JFrog Xray Generate Violations Report (Advanced)
+JFrog Xray Scan Artifact
+Jfrog Xray Trigger Scan Build
+Jfrog Xray Scan Build Results
+JFrog Xray Artifact Summary
+JFrog Xray Create Ignore Rules
+JFrog Xray Delete Ignore Rule
+JFrog Xray Delete Watch
+JFrog Xray Delete Policy
+JFrog Xray Update Policy
+JFrog Xray Create Security (min severity) Policy
+JFrog Xray Create Security (CVSS range) Policy
+JFrog Xray Create License (allowed) Policy
+JFrog Xray Create License (banned) Policy
+JFrog Xray Create Operational Risk (min risk) Policy
+JFrog Xray Create Operational Risk (custom criteria) Policy
+JFrog Xray Create Watch
+JFrog Xray Update Watch
+JFrog Xray Get Watch
+JFrog Xray Get Policy
 
 # On-premise JFrog Installation
 
