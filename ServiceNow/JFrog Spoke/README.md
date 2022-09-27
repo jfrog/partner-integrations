@@ -26,6 +26,11 @@ ServiceNow Spokes are applications with predefined actions that customers can us
 * Generate and Send Xray Violations Reports
 * Trigger Scans of new Artifacts and Builds
 * Manage Custom Item Properties
+* Move, Copy and Delete Artifacts
+* Create, Update, and Delete Watches
+* Create, Update and Delete Policies
+* Manage Group Permissions
+* Injest Xray data into Servicenow Tables
 
 # Getting Started
 
@@ -90,32 +95,27 @@ Go to your ServiceNow instance. For example: https://jfrogshare.service-now.com/
 
 Login using your credentials.
 
-Next, Go to Flow Designer:
+Most Xray flows will be triggered using Xray's ability to send data to a webhook.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m9.png?raw=true" width="800">
-Select New to create a new flow and name it.
+The url/api endpoint you will need to use is:
 
-Once you are in your flow, select a Trigger
+**https://<service-now-Url>/api/x_jfro_xray_spoke/xray
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m10.png?raw=true" width="800">
-
-Under Trigger, select REST API for Flows in ServiceNow
-
-Most Xray flows will be triggered using a REST API post step. Creating this step will automatically generate a webhook that needs to be added to Xray as mentioned above in the section. Example:
-
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m11.png?raw=true" width="800">
-
-The Path can be used when you create the webhook in the JFrog Platform.
+The url above can be used when you create the webhook in the JFrog Platform.
 
 In the JFrog Platform, Xray webhooks can be found under Administration > Xray > Settings
 
 Click on New Webhook in the top right hand corner
 
-The ServiceNow + Path is the full webhook URL that needs to be added to Xray.
-
-You add the URL from the Spoke Path to the URL area in the webhook:
+You add the URL provided above to the URL area in the webhook:
 
 <img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s1.png?raw=true" width="800">
+
+In order to authenticate with ServiceNow you will need to create a service account that has "Web service access only" enabled:
+
+<img src="serviceaccount">
+
+Enter the service account's credentials in the basic auth section on the webhook creation page in Xray.
 
 Then you want to make sure to connect your webhook to the policy in JFrog Xray by going to Administration > Xray > Watches & Policies and click on the policy you want to add this webhook to.
 
@@ -125,7 +125,11 @@ Go to the rules for the policy and select trigger webhook and choose the webhook
 
 Once that is done, Xray should be setup to send violation data to ServiceNow.
 
-This will allow ServiceNow to read the incoming application json.
+This will allow ServiceNow to read the incoming application json. It will store this data in four tables that can be accessed from the spoke called:
+* Violations
+* Issues
+* Impacted Artifacts
+* Infected Files
 
 ## Watch the Spoke Video
 
