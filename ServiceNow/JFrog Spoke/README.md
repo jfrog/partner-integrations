@@ -2,7 +2,7 @@
 
 The JFrog Spoke allows your organization to build automated workflows that interact directly with the JFrog Platform.
 
-Focused on Xray-related actions: from generation violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations.
+Focused on Xray, Artifact, Repository, and JFrog Admin actions. From generating violations reports to creating ignore rules, re-scanning builds and artifacts, assigning custom item properties, and assigning permissions to users and groups, the JFrog Spoke provides out-of-the-box actions that your company can mix-and-match with other ServiceNow workflows to automate your overall IT-operations.
 
 [To see a video of this example, click here.](https://youtu.be/pPcUVXn1Ds0)
 
@@ -99,7 +99,7 @@ Most Xray flows will be triggered using Xray's ability to send data to a webhook
 
 The url/api endpoint you will need to use is:
 
-**https://<service-now-url>/api/x_jfro_xray_spoke/xray**
+**https://{service-now-url}/api/x_jfro_xray_spoke/xray**
 
 The url above can be used when you create the webhook in the JFrog Platform.
 
