@@ -22,7 +22,7 @@ var doc = `{
         "contact": {
             "name": "JFrog Support",
             "url": "https://jfrog.com/support/",
-            "email": "partner-support@jfrog.com"
+            "email": "support@jfrog.com"
         },
         "license": {
             "name": "Apache 2.0",

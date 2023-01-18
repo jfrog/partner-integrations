@@ -5,7 +5,7 @@ The integration between JFrog Xray and Lightstep provides organizations a way to
 [To see a video of this example, click here](https://youtu.be/uFbo8EQ9e08)
 
 # Support
-If you need help with this integration, please contact partner-support@jfrog.com
+If you need help with this integration, please contact support@jfrog.com
 
 # How It Works
 JFrog Xray violations are sent via a webhook into Lightstep where they surface as incidents and alerts. Once in Lightstep, they can be managed through Lightstep’s incident lifecycle management tools. 

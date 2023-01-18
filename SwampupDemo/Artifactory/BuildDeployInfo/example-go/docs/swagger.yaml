@@ -22,7 +22,7 @@ definitions:
     type: object
 info:
   contact:
-    email: partner-support@jfrog.com
+    email: support@jfrog.com
     name: JFrog Support
     url: https://jfrog.com/support/
   description: Example Go API to demo JFrog Partner Integrations
