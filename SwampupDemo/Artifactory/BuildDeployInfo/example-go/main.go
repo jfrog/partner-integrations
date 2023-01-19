@@ -12,7 +12,7 @@ import (
 
 // @contact.name JFrog Support
 // @contact.url https://jfrog.com/support/
-// @contact.email partner-support@jfrog.com
+// @contact.email support@jfrog.com
 
 // @securitydefinitions.oauth2.application OAuth2Application
 // @tokenurl /token

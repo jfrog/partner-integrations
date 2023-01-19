@@ -8,7 +8,7 @@ Focused on Xray, Artifact, Repository, and JFrog Admin actions. From generating 
 
 # Support
 
-If you need help with this integration, please contact `partner-support@jfrog.com`
+If you need help with this integration, please contact `support@jfrog.com`
 
 # How It Works
 
