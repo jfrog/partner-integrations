@@ -135,7 +135,7 @@ A description of each table is located in [ServiceNow Tables for Xray](./TABLES.
 
 ## Example 1: Build Your First Xray Flow
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/HelloWorldFlow.png?raw=true" width="800">
+<img src="./images/HelloWorldFlow.png?raw=true" width="800">
 
 - First, to start using the JFrog Spoke, you must be an Admin of your JFrog Platform instance in order to create the initial webhook needed for Xray.
 
