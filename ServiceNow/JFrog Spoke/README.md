@@ -6,6 +6,15 @@ Focused on Xray, Artifact, Repository, and JFrog Admin actions. From generating 
 
 [To see a video of this example, click here.](https://youtu.be/pPcUVXn1Ds0)
 
+# Table of Contents
+1. [Support](./README.md#support)
+1. [How It Works](./README.md#How It Works)
+1. [Getting Started](./README.md#Getting Started)
+1. [Example](./README.md#Example)
+1. [List of Supported Actions](./README.md#list-of-supported-actions)
+1. [On-Premise JFrog Installation](./README.md#on-premise-jfrog-installation)
+1. [Requirements](./README.md#requirements)
+
 # Support
 
 If you need help with this integration, please contact `support@jfrog.com`
@@ -133,7 +142,9 @@ This will allow ServiceNow to read the incoming application json. It will store 
 
 A description of each table is located in [ServiceNow Tables for Xray](./TABLES.md)
 
-## Example 1: Build Your First Xray Flow
+# Example
+
+## Build Your First Xray Flow
 
 <img src="./images/HelloWorldFlow.png?raw=true" width="800">
 
