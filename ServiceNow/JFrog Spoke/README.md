@@ -8,8 +8,8 @@ Focused on Xray, Artifact, Repository, and JFrog Admin actions. From generating 
 
 # Table of Contents
 1. [Support](./README.md#support)
-1. [How It Works](./README.md#How It Works)
-1. [Getting Started](./README.md#Getting Started)
+1. [How It Works](./README.md#how-it-works)
+1. [Getting Started](./README.md#getting-started)
 1. [Example](./README.md#Example)
 1. [List of Supported Actions](./README.md#list-of-supported-actions)
 1. [On-Premise JFrog Installation](./README.md#on-premise-jfrog-installation)
