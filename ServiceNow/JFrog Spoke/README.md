@@ -7,13 +7,13 @@ Focused on Xray, Artifact, Repository, and JFrog Admin actions. From generating 
 [To see a video of this example, click here.](https://youtu.be/pPcUVXn1Ds0)
 
 # Table of Contents
-1. [Support](./README.md#support)
-1. [How It Works](./README.md#how-it-works)
-1. [Getting Started](./README.md#getting-started)
-1. [Example](./README.md#Example)
-1. [List of Supported Actions](./README.md#list-of-supported-actions)
-1. [On-Premise JFrog Installation](./README.md#on-premise-jfrog-installation)
-1. [Requirements](./README.md#requirements)
+1. [Support](#support)
+1. [How It Works](#how-it-works)
+1. [Getting Started](#getting-started)
+1. [Example](#Example)
+1. [List of Supported Actions](#list-of-supported-actions)
+1. [On-Premise JFrog Installation](#on-premise-jfrog-installation)
+1. [Requirements](#requirements)
 
 # Support
 
@@ -60,7 +60,7 @@ Most of our actions use the JFrog REST API. In order to use it, users must add t
 
 The authentication method uses a bearer token generated from the JFrog platform. To generate a token, go to your profile on the JFrog Platform in the top right hand corner and select “edit profile.” You should see this screen:
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m1.png?raw=true" width="800">
+<img src="./images/m1.png?raw=true" width="800">
 
 Click that “Generate an Identity Token” button after unlocking this page by entering your password. We will use this identity token to create an API credential and connect it to the aforementioned connection alias. (Do not use the Generate API Key option)
 
@@ -68,32 +68,32 @@ Click that “Generate an Identity Token” button after unlocking this page by 
 
 To connect these credentials in ServiceNow navigate to the Credentials Tab.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m2.png?raw=true" width="800">
+<img src="./images/m2.png?raw=true" width="800">
 
 Create a new API Key Credentials
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m3.png?raw=true" width="800">
+<img src="./images/m3.png?raw=true" width="800">
 
 Enter the Identity Token from the JFrog Platform as the API Key here:
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m4.png?raw=true" width="800">
+<img src="./images/m4.png?raw=true" width="800">
 
 Next you go to Connections and Credentials Aliases, and enter the JFrog Platform Admin Connection and Credential Alias.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m5.png?raw=true" width="800">
+<img src="./images/m5.png?raw=true" width="800">
 
 In the connections tab near the bottom area, hit the New button
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m6.png?raw=true" width="800">
+<img src="./images/m6.png?raw=true" width="800">
 
 The connection alias should come prefilled; if it isn't make sure to add an alias, so it matches what is seen below.
 Next, in the Credential input (hit the search button), and it will allow you to select the newly created credential
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m7.png?raw=true" width="800">
+<img src="./images/m7.png?raw=true" width="800">
 
 Enter your JPD base url in the Connection URL box:
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/m8.png?raw=true" width="800">
+<img src="./images/m8.png?raw=true" width="800">
 
 To save the credential alias, please hit Submit at the bottom.
 
@@ -113,12 +113,12 @@ The url/api endpoint you will need to use is:
 
 - You add the URL provided above to the URL area in the webhook:
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s1.png?raw=true" width="800">
+<img src="./images/s1.png?raw=true" width="800">
 
 This won't work until we authenticate with ServiceNow.
 In order to do this you will need to create a service account that has "Web service access only" enabled in the ServiceNow platform:
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/ServiceAccount.png?raw=true" width="800">
+<img src="./images/ServiceAccount.png?raw=true" width="800">
 
 - Enter these service account's credentials in the basic auth section on the webhook creation page in Xray.
 
@@ -127,7 +127,7 @@ Therefore, make sure you connect your webhook to a policy in JFrog Xray by going
 
 - Go to the rules for the policy and select trigger webhook and choose the webhook with the name you provided.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/s22.png?raw=true" width="800">
+<img src="./images/s22.png?raw=true" width="800">
 
 - Finally make sure that policy is associated with a watch on your relevant repositories and builds.
   For more information on how watches and policies work in Xray, please see: [Configuring Xray Watches.](https://www.jfrog.com/confluence/display/JFROG/Configuring+Xray+Watches)
