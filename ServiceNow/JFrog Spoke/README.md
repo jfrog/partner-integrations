@@ -23,7 +23,7 @@ If you need help with this integration, please contact `support@jfrog.com`
 
 ServiceNow Spokes are applications with predefined actions that customers can use to build workflows on the NOW Platform. The JFrog Spoke has actions that can be combined with other native Spokes from ServiceNow and other third-party tools to create enterprise-grade workflows for vulnerability and change management for all your ITSM needs.
 
-<img src="https://github.com/jfrog/partner-integrations/blob/main/ServiceNow/JFrog%20Spoke/images/im-1.png?raw=true" width="800">
+<img src="./images/HelloWorldFlow.png?raw=true" width="800">
 
 ## Major Features Include:
 
@@ -195,50 +195,50 @@ These actions all implement APIs from Artifactory, Xray, and the JFrog Platform.
 
 |Name | Description |
 |------------ | ------------ |
-|JFrog Create User | Creates an user |
-|JFrog Update User | Updates an user |
-|JFrog Delete User | Deletes an user |
-|JFrog Get User | Retrieve a single user |
-|JFrog Get Users | Retrieve a list of users |
-|JFrog Create or Replace Permission Target | Creates a new permission target or replaces an existing one. |
+|JFrog Create User | Creates a JFrog user |
+|JFrog Update User | Updates a JFrog user |
+|JFrog Delete User | Deletes a JFrog user |
+|JFrog Get User | Retrieve a single JFrog user |
+|JFrog Get Users | Retrieve a list of JFrog users |
+|JFrog Create or Replace Permission Target | Creates a new [permission target](https://www.jfrog.com/confluence/display/JFROG/Permissions) or replaces an existing one. |
 |JFrog Delete Permission Target | Deletes a permission target |
 |JFrog Get Permission Targets | Retrieves a list of permission targets |
 |JFrog Get Permission Target Details | Retrieve the details of a specific permission target |
-|JFrog Artifactory Update Group | Updates an existing group in artifactory |
+|JFrog Artifactory Update Group | Updates an existing [group](https://www.jfrog.com/confluence/display/JFROG/Users+and+Groups) in Artifactory |
 |JFrog Artifactory Get Groups | Retrieves a list of groups |
 |JFrog Artifactory Get Group Details | Get details of a single group |
 |JFrog Artifactory Create or Replace Group | Creates a new group or replaces an existing one |
-|JFrog Artifactory Set Item Properties | Set a new item property (or properties) |
+|JFrog Artifactory Set Item Properties | Set a new [item property](https://www.jfrog.com/confluence/display/JFROG/Working+with+JFrog+Properties) (or properties) |
 |JFrog Artifactory Update Item Properties | Update a single item property (by key) |
 |JFrog Artifactory Delete Item Properties | Delete an item property |
-|JFrog Artifactory Move Item | Move an artifact or other item/file in artifactory |
-|JFrog Artifactory Copy Item | Copy an artifact or other item/file in artifactory |
-|JFrog Artifactory Delete Item | Delete an artifact or other item/file in artifactory |
+|JFrog Artifactory Move Item | Move an artifact or other item/file in Artifactory |
+|JFrog Artifactory Copy Item | Copy an artifact or other item/file in Artifactory |
+|JFrog Artifactory Delete Item | Delete an artifact or other item/file in Artifactory |
 |JFrog Artifactory Get Repos | Get a list of repositories |
 |JFrog Artifactory Delete Repository | Delete a repository |
 |JFrog Artifactory Create Repository | Create a repository |
-|JFrog Xray Generate Violations Report | Generate a violations report |
+|JFrog Xray Generate Violations Report | Generate a [violations report](https://www.jfrog.com/confluence/display/JFROG/Xray+Reports#XrayReports-ViolationsReport) |
 |JFrog Xray Export Violations Report | Export a violations report. Stores it in the attachments table in ServiceNow |
-|JFrog Xray Generate Violations Report (Advanced) | Generate a violations report. Only accepts a json payload input. Please check API spec to see details. |
+|JFrog Xray Generate Violations Report (Advanced) | Generate a violations report. Only accepts a json payload input. Please check [the API spec](https://www.jfrog.com/confluence/display/JFROG/Xray+REST+API#XrayRESTAPI-GenerateViolationsReport) to see details. |
 |JFrog Xray Scan Artifact | Triggers an Xray scan of an artifact |
 |Jfrog Xray Trigger Scan Build | Triggers an Xray scan of a build |
-|Jfrog Xray Scan Build Results | Retrieves the results of a previous build scan |
-|JFrog Xray Artifact Summary | Retrieves a security summary of an artifact |
-|JFrog Xray Create Ignore Rules | Creates ignore rules |
-|JFrog Xray Delete Ignore Rule | Deletes ignore rules |
+|Jfrog Xray Scan Build Results | Retrieves the results of a previous Xray build scan |
+|JFrog Xray Artifact Summary | Retrieves a [security summary of an artifact](https://www.jfrog.com/confluence/display/JFROG/Xray+REST+API#XrayRESTAPI-ArtifactSummary) |
+|JFrog Xray Create Ignore Rules | Creates Xray [ignore rules](https://www.jfrog.com/confluence/display/JFROG/Ignore+Rules) |
+|JFrog Xray Delete Ignore Rule | Deletes Xray ignore rules |
+|JFrog Xray Create Watch | Creates a Xray Watch |
+|JFrog Xray Update Watch | Updates a Xray Watch |
+|JFrog Xray Get Watch | Retrieves a Xray Watch |
 |JFrog Xray Delete Watch | Deletes a Xray watch |
+|JFrog Xray Get Policy | Retrieves any Xray Policy |
 |JFrog Xray Delete Policy | Deletes a Xray policy |
 |JFrog Xray Update Policy | Updates a Xray policy |
 |JFrog Xray Create Security (min severity) Policy | Creates a policy based on severity |
 |JFrog Xray Create Security (CVSS range) Policy | Creates a policy based on CVSS range |
 |JFrog Xray Create License (allowed) Policy | Creates a policy based around which licenses are allowed |
 |JFrog Xray Create License (banned) Policy | Creates a policy based around which licenses are banned |
-|JFrog Xray Create Operational Risk (min risk) Policy | Creates a policy based around a minimum operational risk |
+|JFrog Xray Create Operational Risk (min risk) Policy | Creates a policy based around a minimum [operational risk]() |
 |JFrog Xray Create Operational Risk (custom criteria) Policy | Creates a policy based around custom parameters for operational risk |
-|JFrog Xray Create Watch | Creates a Xray Watch |
-|JFrog Xray Update Watch | Updates a Xray Watch |
-|JFrog Xray Get Watch | Retrieves a Xray Watch |
-|JFrog Xray Get Policy | Retrieves any Xray Policy |
 
 # On-premise JFrog Installation
 
