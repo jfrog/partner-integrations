@@ -23,12 +23,8 @@ require (
 	github.com/swaggo/swag v1.7.0
 	github.com/tidwall/buntdb v1.2.3 // indirect
 	github.com/valyala/fasthttp v1.23.0 // indirect
-	golang.org/x/mod v0.4.1 // indirect
-	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
-	golang.org/x/sys v0.0.0-20210412220455-f1c623a9e750 // indirect
-	golang.org/x/text v0.3.6 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba // indirect
-	golang.org/x/tools v0.1.0 // indirect
 	gopkg.in/DataDog/dd-trace-go.v1 v1.31.0
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
