@@ -193,9 +193,36 @@ Outside the UI elements, you can also interact with our application using comman
 
 # On-premise JFrog Installation
 
-To use the Slack integration with an on-premise JFrog installation, the network port `8082` will need to be exposed to the external network. See [JFrog System Requirements](https://www.jfrog.com/confluence/display/JFROG/System+Requirements#SystemRequirements-RequirementsMatrix) for more information.
+## Enable Integrations
 
-Then when configuring the JPD, include the network port in the JPD url, e.g. `https://example.com:8082`
+To use the Slack integration with an on-premise JFrog installation, you need to enable the "Manage Integrations" section under "Settings -> General" by following these steps:
+
+1. Update the Artifactory system configuration and edit `system.yaml` in `/opt/jfrog/artifactory/var/etc/`. See [Artifactory System YAML](https://jfrog.com/help/r/jfrog-installation-setup-documentation/artifactory-system-yaml) for more details.
+​
+​
+```yaml
+shared:
+    featureToggler:
+        accessIntegration: true
+```
+
+2. Update the Access yaml configuration and create a new file (if not already exists) called `access.config.patch.yml` in `/opt/jfrog/artifactory/var/etc/access/`. See [Access YAML Configuration](https://jfrog.com/help/r/jfrog-installation-setup-documentation/access-yaml-configuration) for more details.
+​
+​
+```yaml
+integrations-enabled: true
+integration-templates: 
+  - id: "1" 
+    name: "JFrog Collaboration Integration" 
+    redirect-uri: "https://saas-connector.jfrog.io/v1/oauth2/login/redirect"
+    scope: "applied-permissions/user"
+```
+​
+3. Restart the platform after saving the files
+
+## Network
+
+The network port `8082` will need to be exposed to the external network. See [JFrog System Requirements](https://www.jfrog.com/confluence/display/JFROG/System+Requirements#SystemRequirements-RequirementsMatrix) for more information. Then when configuring the JPD in the Slack app, include the network port with the JPD url, e.g. `https://example.com:8082`
 
 # Requirements
 
