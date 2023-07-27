@@ -1,7 +1,12 @@
+# Highlights from update made on 07/12/2023
+
+* Summarized notifications - now instead of getting hundreds of notifications from JFrog Xray, you get a much shorter list of notifications summarized by severity
+* Included in your PagerDuty event is also a link to the scan results page in the JFrog Xray UI
+
 # PagerDuty + JFrog Xray Integration Benefits
 * **Proactively manage security and compliance** across the software development and release lifecycle.  Receive early notifications within PagerDuty on vulnerabilities and compliance violations impacting artifacts, builds and components before releasing to production.      
 * **Customize notifications** Configure granular policies within JFrog Xray based on type of violation, severity, and receive notifications on repositories, builds or release bundles of interest.
-* **Granular Visibility** Receive a summary of Xray watch issues by severity as well as the link to the watch scan results as a PagerDuty event.
+* **Summarized notifications for easy consumption** Receive a summary of Xray watch issues by severity as well as the link to the watch scan results as a PagerDuty event.
 
 # How it Works
 * Users will install the JFrog Xray integration application from within the PagerDuty Service Directory and receive a URL to setup the PagerDuty webhook within JFrog Xray
@@ -13,26 +18,26 @@
 * Once you have setup using the walkthrough below, the following metadata will become available in PagerDuty:
 
 
-| CUSTOM DETAILS                     |                                                                          |
-|------------------------------------|--------------------------------------------------------------------------|
-| license_issues                     | 5                                                                        |
-| number_of_critical_severity_issues | 15                                                                       |
-| number_of_high_severity_issues     | 30                                                                       |
-| number_of_low_severity_issues      | 51                                                                       |
-| number_of_medium_severity_issues   | 35                                                                       |
-| policy_name                        | PD-Test-policy                                                           | 
-| policy_rule                        | PD-Test-rule                                                             | 
-| top_severity                       | Critical                                                                 | 
-| vulnerabilities                    | 131                                                                      | 
-| watch_name                         | PD-Test-watch                                                            | 
-| watch_url                          | https://<hostname>/ui/watchesNew/edit/PD-Test-watch?activeTab=violations | 
+| CUSTOM DETAILS                     |                                                                            |
+|------------------------------------|----------------------------------------------------------------------------|
+| license_issues                     | 5                                                                          |
+| number_of_critical_severity_issues | 15                                                                         |
+| number_of_high_severity_issues     | 30                                                                         |
+| number_of_low_severity_issues      | 51                                                                         |
+| number_of_medium_severity_issues   | 35                                                                         |
+| policy_name                        | PD-Test-policy                                                             | 
+| policy_rule                        | PD-Test-rule                                                               | 
+| top_severity                       | Critical                                                                   | 
+| vulnerabilities                    | 131                                                                        | 
+| watch_name                         | PD-Test-watch                                                              | 
+| watch_url                          | https://{_hostname_}/ui/watchesNew/edit/PD-Test-watch?activeTab=violations | 
        
 # Requirements
 * PagerDuty integration requires an admin base role for account authorization. If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
 * JFrog Xray requires an Admin based role with administrative privileges to configure the integration.  If you do not have this role, please reach out to an Admin or Account Owner within your organization to configure the integration.
 
 # Support
-If you need help with this integration, please contact `partner_support@jfrog.com`
+If you need help with this integration, please contact `support@jfrog.com`
 
 # Integration Walkthrough
 To add the integration, you must first have a PagerDuty account setup. Next, follow the instructions below or [watch the video](https://www.youtube.com/watch?v=WxUc8bcEh0U) to understand how to finish the integration.
