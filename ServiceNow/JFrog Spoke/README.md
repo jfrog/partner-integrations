@@ -1,3 +1,6 @@
+> [!WARNING]
+> The integration will reach End of Support on May 31, 2024. After that date, this project will no longer be supported by JFrog and receive no updates.
+
 # Welcome to the JFrog Spoke Documentation
 
 The JFrog Spoke allows your organization to build automated workflows that interact directly with the JFrog Platform.
